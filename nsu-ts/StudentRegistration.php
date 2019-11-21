@@ -49,7 +49,7 @@ background-color: #ECF9FF;
             <div class="row">
               <div class="col-md-12 nopadding">
                 <div class="title">
-                  <a href="index.html"><img src="images/logo.png">North South University Tuition Services</a>
+                  <a href="index.php"><img src="images/logo.png">North South University Tuition Services</a>
                 </div>
               </div>
             </div>
@@ -58,7 +58,7 @@ background-color: #ECF9FF;
                <div class="section-title">
                     <div align='center'>
                       <BR><BR><BR>
-                        <div align='center' class="card text-center" style= "font-family:Georgia; max-width: 50rem;">
+                        <div align='center' class="card text-center" style= "font-family: Book Antiqua; max-width: 50rem;">
                         <form name="StudentForm" class="text-center border border-light p-5" method="POST" action="StudentInsert.php">
 
                             <h4 class="h4 mb-4">Student Registration</h4>
