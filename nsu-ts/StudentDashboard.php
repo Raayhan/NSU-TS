@@ -34,7 +34,7 @@ require_once 'connect.php';
       <div class="row">
         <div class="col-md-12 nopadding">
           <div class="title">
-            <a href="index.html"><img src="images/logo.png">North South University Tuition Services</a>
+            <a href="StudentDashboard.php"><img src="images/logo.png">North South University Tuition Services</a>
           </div>
         </div>
         <div class="col-md-12 nopadding">
