@@ -1,0 +1,311 @@
+/* Default For All Pages - Start */
+
+
+body{
+	padding: 0;
+	margin: 0;
+}
+img{
+	width: 100%;
+	max-width: 100%;
+}
+.left{
+	float:left;
+}
+.right{
+	float: right;
+}
+.nopadding{
+	padding: 0 !important;
+}
+/* Default For All Pages - END */
+
+/* Header CSS - Start */
+.header {
+
+	text-align: center;
+	background-color: #282923;
+}
+.title img {
+    width: 70px;
+}
+.title {
+    text-align: center;
+    overflow: hidden;
+    background-color: #ECF9FF;
+    padding: 10px 0;
+}
+.title a {
+    color: #0D012C;
+    text-decoration: none;
+    line-height: 25px;
+    font-size: 28px;
+		font-family: Copperplate Gothic Light;
+    font-weight: bold;
+
+}
+.title a:hover {
+	text-decoration: none;
+	color:#60151A;
+}
+.header-left {
+  	background-color: #282923;
+}
+.header-left ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+.header-left li {
+  float: left;
+	border-right: 1px solid #bbb;
+}
+.header-left ul li a {
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 12px;
+		font-family: Copperplate Gothic Light;
+    float: left;
+    text-decoration: none;
+}
+.header-left ul li a:hover {
+    color: #fff;
+    background-color: #60151A;
+    text-decoration: none;
+}
+.header-left i{
+	padding-right: 5px;
+}
+.header-right {
+  	background-color: #282923;
+}
+.header-right ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+.header-right li {
+  float: right;
+
+}
+.header-right ul li a {
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    font-family: Copperplate Gothic Light;
+    float: right;
+    text-decoration: none;
+}
+.header-right ul li a:hover {
+    color: #fff;
+    background-color: #60151A;
+    text-decoration: none;
+}
+.dropbtn {
+    background-color: #60151A;
+    color: white;
+    padding: 10px;
+		font-family: Copperplate Gothic Light;
+    font-size: 12px;
+    border:none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #282922;
+    min-width: 100px;
+    box-shadow: 2px 2px 10px black;
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    font-family: Copperplate Gothic Light;
+}
+
+.dropdown-content a:hover {
+	background-color: #60151A;
+	color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+/* Header CSS - END */
+
+
+
+/* SECTION CSS - Start */
+.section-title {
+    text-align: center;
+    overflow: hidden;
+    padding: 20px 0;
+}
+.section-title h2 {
+    color: #0D012C;
+    text-decoration: none;
+    line-height: 25px;
+    font-size: 36px;
+    font-family: Copperplate Gothic Light;
+    font-weight: 400;
+}
+.section-title h3 {
+    color: #0D012C;
+    text-decoration: none;
+    line-height: 25px;
+    font-size: 28px;
+    font-family: Copperplate Gothic Light;
+    font-weight: 400;
+}
+.section-title h4 {
+    color: #0D012C;
+    text-decoration: none;
+    line-height: 25px;
+    font-size: 22px;
+    font-family: Copperplate Gothic Light;
+    font-weight: 400;
+}
+.section-title p {
+    color: #0D012C;
+    text-decoration: none;
+    line-height: 25px;
+    font-size: 14px;
+    font-family: Copperplate Gothic Light;
+    font-weight: bold;
+}
+
+.my-box-option {
+    border: 3px solid #0D012C;
+    overflow: hidden;
+    margin: 10px 0;
+}
+.my-box-option:hover{
+    box-shadow: 2px 2px 10px black;
+}
+.my-box-image img{
+	width: 100%;
+	height: 160px;
+}
+.my-box-content {
+    background-color: #60151A;
+    padding: 10px;
+}
+.my-box-title{
+	color: #fff;
+	font-size: 20px;
+	font-family: Copperplate Gothic Light;
+}
+.my-box-text{
+	color: #fff;
+	font-size: 12px;
+	font-family: Copperplate Gothic Light;
+	height: 50px;
+}
+.box-button {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 5px 20px;
+		border-radius: 15px;
+    background-color: #0D012C;
+    font-family: Copperplate Gothic Light;
+}
+.box-button:hover {
+    background-color: #3E8D41;
+    color:#fff;
+    text-decoration: none;
+}
+
+/* SECTION CSS - End */
+
+
+
+
+
+/* Footer CSS - Start */
+.footer{
+	overflow: hidden;
+	background-color: #0D012C;
+	padding: 20px 0;
+	margin-top: 100px;
+}
+.footer-about h2{
+	color: #fff;
+    text-decoration: none;
+    line-height: 25px;
+    font-size: 20px;
+    font-family: Copperplate Gothic Light;
+    font-weight: bold;
+}
+.footer-about p{
+	color: #fff;
+    text-decoration: none;
+    line-height: 20px;
+    font-size: 12px;
+    font-family: Copperplate Gothic Light;
+    font-weight: none;
+}
+
+.mainform {
+    padding-top: 15px;
+}
+
+.formvalidation {
+	overflow: hidden;
+}
+.footer-news{
+	padding: 30px 0 0 0;
+}
+.footer-about{
+	padding: 20px 0;
+}
+.footer-news h2{
+	color: #fff;
+    text-decoration: none;
+    line-height: 16px;
+    font-size: 20px;
+    font-family: Copperplate Gothic Light;
+    font-weight: 200;
+    margin:0;
+}
+input{
+	padding:1px;
+}
+.submit-button{
+    color: #fff;
+    background-color: #60151A;
+    border: 1px solid #60151A;
+    cursor: pointer;
+		border-radius:15px;
+		padding: 5px 20px;
+		font-family: Copperplate Gothic Light;
+		font-size: 12px;
+}
+.submit-button:hover{
+	background-color: #3E8D41;
+	color:#fff;
+}
