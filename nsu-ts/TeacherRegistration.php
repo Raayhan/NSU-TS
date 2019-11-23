@@ -1,5 +1,7 @@
 <?php
 require_once 'connect.php';
+
+include('TeacherRegister.php')
 ?>
 
 
@@ -57,8 +59,8 @@ background-color: #ECF9FF;
                     <div align='center'>
                       <BR><BR><BR>
                         <div align='center' class="card text-center" style= "font-family: Book Antiqua; max-width: 50rem;">
-                        <form class="text-center border border-light p-5" method="POST" action="TeacherInsert.php">
-
+                        <form class="text-center border border-light p-5" method="POST" action="TeacherRegister.php">
+                            <?php echo display_error(); ?>
                             <h4 class="h4 mb-4">Teacher Registration</h4>
 
                             <div class="form-row mb-4">
@@ -117,7 +119,7 @@ background-color: #ECF9FF;
 
 
                             <!-- Sign up button -->
-                            <button class="btn btn-unique my-4 btn-block" type="submit">Register</button>
+                            <button class="btn btn-unique my-4 btn-block" name="register_btn" type="submit">Register</button>
 
                             <!-- Social register -->
                             <p>or register with</p>

@@ -1,5 +1,9 @@
 <?php
 
+include('StudentLogin.php'); // Includes Login Script
+if(isset($_SESSION['login_user'])){
+header("location: StudentDashboard.php"); // Redirecting To Profile Page
+}
 ?>
 
 <!DOCTYPE html>
@@ -191,19 +195,19 @@ background-color: #ECF9FF;
                           <a class="btn btn-elegant" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Student</a>
                                                           <div id="id01" class="modal">
 
-                          <form class="modal-content animate" action="/action_page.php" method="post">
+                          <form class="modal-content animate" action="/StudentLogin.php" method="post">
                               <div class="imgcontainer">
                                   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                                   <img src="images/student.jpg" alt="Avatar" class="avatar">
                               </div>
 
 
-                              <div class="container">
+                              <div class="container" style="font-family: Book Antiqua;">
                                   <h6> Student Login</h6>
-                                  <label for="StudentEmail"><b>E-mail</b></label>
-                                  <input type="email" placeholder="Enter E-mail" name="StudentEmail" required>
+                                  <label for="email"><b>E-mail</b></label>
+                                  <input type="email" placeholder="Enter E-mail" name="email" required>
                                   <label for="psw"><b>Password</b></label>
-                                  <input type="password" placeholder="Enter your Password" name="psw" required>
+                                  <input type="password" placeholder="Enter your Password" name="password" required>
                                   <button type="submit">Login</button>
                                   <label>
                                         <input type="checkbox" checked="checked" name="remember"> Remember me
