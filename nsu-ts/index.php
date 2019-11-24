@@ -11,11 +11,11 @@ header("location: StudentDashboard.php"); // Redirecting To Profile Page
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" type="text/css" href="responsive.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/mdb.min.css" rel="stylesheet">
-<script src="script.js" type="text/javascript"></script>
+<script src="scipts/script.js" type="text/javascript"></script>
 
 
 <!-- Bootstrap CSS -->
@@ -101,7 +101,7 @@ span.psw {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 30%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
@@ -242,7 +242,7 @@ background-color: #ECF9FF;
                               </div>
 
 
-                              <div class="container">
+                              <div class="container" style="font-family: Book Antiqua;">
                                   <h6> Teacher Login</h6>
                                   <label for="TeacherEmail"><b>E-mail</b></label>
                                   <input type="email" placeholder="Enter E-mail" name="TeacherEmail" required>
