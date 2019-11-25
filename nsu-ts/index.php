@@ -1,9 +1,7 @@
 <?php
-
+require('connect.php');
 include('StudentLogin.php'); // Includes Login Script
-if(isset($_SESSION['login_user'])){
-header("location: StudentDashboard.php"); // Redirecting To Profile Page
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -196,6 +194,7 @@ background-color: #ECF9FF;
                                                           <div id="id01" class="modal">
 
                           <form class="modal-content animate" action="/StudentLogin.php" method="post">
+
                               <div class="imgcontainer">
                                   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                                   <img src="images/student.jpg" alt="Avatar" class="avatar">
@@ -204,11 +203,12 @@ background-color: #ECF9FF;
 
                               <div class="container" style="font-family: Book Antiqua;">
                                   <h6> Student Login</h6>
+
                                   <label for="email"><b>E-mail</b></label>
                                   <input type="email" placeholder="Enter E-mail" name="email" required>
                                   <label for="psw"><b>Password</b></label>
                                   <input type="password" placeholder="Enter your Password" name="password" required>
-                                  <button type="submit">Login</button>
+                                  <button type="submit" name="login_btn">Login</button>
                                   <label>
                                         <input type="checkbox" checked="checked" name="remember"> Remember me
                                   </label>
@@ -235,7 +235,7 @@ background-color: #ECF9FF;
 
                         <a class="btn btn-danger" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Teacher</a>
                         <div id="id02" class="modal">
-                          <form class="modal-content animate" action="/action_page.php" method="post">
+                          <form class="modal-content animate" action="/TeacherLogin.php" method="post">
                               <div class="imgcontainer">
                                   <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
                                   <img src="images/student.jpg" alt="Avatar" class="avatar">
@@ -245,17 +245,17 @@ background-color: #ECF9FF;
                               <div class="container" style="font-family: Book Antiqua;">
                                   <h6> Teacher Login</h6>
                                   <label for="TeacherEmail"><b>E-mail</b></label>
-                                  <input type="email" placeholder="Enter E-mail" name="TeacherEmail" required>
+                                  <input type="email" placeholder="Enter E-mail" name="email" required>
                                   <label for="psw"><b>Password</b></label>
-                                  <input type="password" placeholder="Enter your Password" name="psw" required>
-                                  <button type="submit">Login</button>
+                                  <input type="password" placeholder="Enter your Password" name="password" required>
+                                  <button type="submit" name="login_btn">Login</button>
                                   <label>
                                         <input type="checkbox" checked="checked" name="remember"> Remember me
                                   </label>
                                </div>
 
                                <div class="container" style="background-color:#f1f1f1">
-                                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                  <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
                                   <span class="psw"><a href="#">Forgot Password?</a></span>
                                </div>
                             </form>

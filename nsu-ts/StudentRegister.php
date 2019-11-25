@@ -59,12 +59,12 @@ function register(){
 
 
 
-    $query = "INSERT INTO teachers (first_name, last_name, email, password, phone, gender, department)
+    $query = "INSERT INTO students (first_name, last_name, email, password, phone, gender, department)
     VALUES ('$first_name', '$last_name', '$email', '$password', '$phone', '$gender', '$department')";
 
     if (mysqli_query($conn, $query)) {
       $_SESSION['success']  = "New user successfully created!!";
-      header('location: TeacherDashboard.php');
+      header('location: StudentDashboard.php');
       }
     else {
      echo "Error: " . $query . "<br>" . mysqli_error($conn);
@@ -74,11 +74,11 @@ function register(){
 
 
 			// get id of the created user
-			$logged_in_teacher_id = mysqli_insert_id($conn);
+			$logged_in_student_id = mysqli_insert_id($conn);
 
-			$_SESSION['teacher'] = getUserById($logged_in_teacher_id); // put logged in user in session
+			$_SESSION['student'] = getUserById($logged_in_student_id); // put logged in user in session
 			$_SESSION['success']  = "You are now logged in";
-			header('location: TeacherDashboard.php');
+			header('location: StudentDashboard.php');
 		}
 
 
@@ -86,11 +86,11 @@ function register(){
 // return user array from their id
 function getUserById($id){
 	global $conn;
-	$query = "SELECT * FROM teachers WHERE id=" . $id;
+	$query = "SELECT * FROM students WHERE id=" . $id;
 	$result = mysqli_query($conn, $query);
 
-	$teacher = mysqli_fetch_assoc($result);
-	return $teacher;
+	$student = mysqli_fetch_assoc($result);
+	return $student;
 }
 
 
@@ -111,7 +111,7 @@ function display_error() {
 
 function isSignedIn()
 {
-	if (isset($_SESSION['teacher'])) {
+	if (isset($_SESSION['student'])) {
 		return true;
 	}else{
 		return false;
@@ -120,9 +120,9 @@ function isSignedIn()
 
 // log user out if logout button clicked
 
-if (isset($_GET['TeacherSignout'])) {
+if (isset($_GET['StudentSignout'])) {
 	session_destroy();
-	unset($_SESSION['teacher']);
+	unset($_SESSION['student']);
 	header("location: index.php");
 }
 

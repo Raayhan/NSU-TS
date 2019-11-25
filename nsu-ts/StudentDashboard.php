@@ -1,7 +1,15 @@
 
 <?php
 require_once 'connect.php';
+include('StudentRegister.php');
 
+
+
+if (isset($_GET['StudentSignout'])) {
+	session_destroy();
+	unset($_SESSION['student']);
+	header('location: index.php');
+}
 ?>
 
 
@@ -40,7 +48,7 @@ require_once 'connect.php';
         <div class="col-md-12 nopadding">
           <div class="header">
               <div class="col-md-11 left nopadding">
-                <div class="header-left">
+                <div class="header-left" >
                   <ul>
                       <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"> </i>Home</a></li>
                       <li><a href="#news"><i class="fa fa-users" aria-hidden="true"></i>Profile</a></li>
@@ -54,7 +62,7 @@ require_once 'connect.php';
                     <button class="dropbtn">SIGN OUT</button>
                     <div class="dropdown-content">
                       <a href="#">Settings</a>
-                      <a href="#">Sign Out</a>
+                      <a href="StudentSignout.php">Sign Out</a>
                     </div>
                   </div>
                </div>
@@ -73,6 +81,16 @@ require_once 'connect.php';
         <div class="col-md-12">
           <div class="section-title">
             <h2>Welcome !</h2>
+
+                         <?php  if (isset($_SESSION['student'])) : ?>
+
+                           <html>
+                                <h4 style="font-family:Book Antiqua;"><?php echo $_SESSION['student']['first_name'].' '.$_SESSION['student']['last_name'];?></h4>
+
+                           </html>
+
+                         <?php endif ?>
+
             <p>Please select your desired category for courses</p>
           </div>
         </div>

@@ -4,10 +4,7 @@
 require_once 'connect.php';
 include('TeacherRegister.php');
 
-if (!isSignedIn()) {
-      	$_SESSION['msg'] = "You must log in first";
-      	header('location: index.php');
-                    }
+
 
 if (isset($_GET['signout'])) {
 	session_destroy();
@@ -64,7 +61,7 @@ if (isset($_GET['signout'])) {
                      <button class="dropbtn">SIGN OUT</button>
                      <div class="dropdown-content">
                        <a href="#">Settings</a>
-                       <a href="signout.php">Sign Out</a>
+                       <a href="TeacherSignout.php">Sign Out</a>
                      </div>
                    </div>
                 </div>
@@ -89,7 +86,11 @@ if (isset($_GET['signout'])) {
              <h2>Welcome  !</h2>
 
              <?php  if (isset($_SESSION['teacher'])) : ?>
-               <strong><?php echo $_SESSION['teacher']['first_name']; ?></strong>
+
+               <html>
+                    <h4 style="font-family:Book Antiqua;"><?php echo $_SESSION['teacher']['first_name'].' '.$_SESSION['teacher']['last_name'];?></h4>
+
+               </html>
 
              <?php endif ?>
 
