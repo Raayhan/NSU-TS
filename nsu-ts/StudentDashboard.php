@@ -4,7 +4,6 @@ require_once 'connect.php';
 include('StudentRegister.php');
 
 
-
 if (isset($_GET['StudentSignout'])) {
 	session_destroy();
 	unset($_SESSION['student']);
@@ -50,8 +49,8 @@ if (isset($_GET['StudentSignout'])) {
               <div class="col-md-11 left nopadding">
                 <div class="header-left" >
                   <ul>
-                      <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"> </i>Home</a></li>
-                      <li><a href="#news"><i class="fa fa-users" aria-hidden="true"></i>Profile</a></li>
+                      <li><a href="StudentDashboard"><i class="fa fa-home" aria-hidden="true"> </i>Home</a></li>
+                      <li><a href="StudentProfile.php"><i class="fa fa-users" aria-hidden="true"></i>Profile</a></li>
                       <li><a href="#preferences"><i class="fa fa-folder-open" aria-hidden="true"></i>Preferences</a></li>
                   </ul>
                </div>

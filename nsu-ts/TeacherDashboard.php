@@ -50,7 +50,7 @@ if (isset($_GET['signout'])) {
                  <div class="header-left">
                    <ul>
                        <li><a href="TeacherDashboard.php"><i class="fa fa-home" aria-hidden="true"> </i>Home</a></li>
-                       <li><a href="T_Profile.php"><i class="fa fa-users" aria-hidden="true"></i>Profile</a></li>
+                       <li><a href="TeacherProfile.php"><i class="fa fa-users" aria-hidden="true"></i>Profile</a></li>
                        <li><a href="T_Preferences.php"><i class="fa fa-folder-open" aria-hidden="true"></i>Preferences</a></li>
                    </ul>
                 </div>

@@ -4,7 +4,7 @@
 
 session_start();
 
-ob_start();
+
 
 //connect to the database so we can check, edit, or insert data to our users table
 
@@ -67,9 +67,10 @@ if($num == 0){
 
 //if not display error message
 
-echo "<center>The <b>Password</b> you supplied does not match the one for that username!</center>";
-
-}else{
+$message = "Incorrect Password.\\nTry again.";
+  echo "<script type='text/javascript'>alert('$message');</script>";
+}
+else{
 
 //if there was continue checking
 
@@ -82,12 +83,12 @@ echo "<center>You have successfully logged in!</center>";
 
 //update the online field to 50 seconds into the future
 
-$time = date('U')+50;
 
 
+$logged_in_student_id = mysqli_insert_id($conn);
 
 //redirect them to the usersonline page
-$_SESSION['student'] = getUserById($logged_in_student_id); // put logged in user in session
+$_SESSION['student'] = getStudentById($logged_in_student_id); // put logged in user in session
 $_SESSION['success']  = "You are now logged in";
 header('location: StudentDashboard.php');
 
@@ -98,7 +99,7 @@ header('location: StudentDashboard.php');
 }
 
 }
-function getUserById($id){
+function getStudentById($id){
 	global $conn;
 	$query = "SELECT * FROM students WHERE id=" . $id;
 	$result = mysqli_query($conn, $query);
@@ -113,6 +114,6 @@ function getUserById($id){
 
 
 
-ob_end_flush();
+
 
 ?>
