@@ -72,41 +72,21 @@ $message = "Incorrect Password.\\nTry again.";
 }
 else{
 
-//if there was continue checking
+  $logged_in_student_id = mysqli_fetch_assoc($res);
 
-//split all fields fom the correct row into an associative array
-
-$row = mysqli_fetch_assoc($res);
-
-
-echo "<center>You have successfully logged in!</center>";
-
-//update the online field to 50 seconds into the future
-
-
-
-$logged_in_student_id = mysqli_insert_id($conn);
-
-//redirect them to the usersonline page
-$_SESSION['student'] = getStudentById($logged_in_student_id); // put logged in user in session
-$_SESSION['success']  = "You are now logged in";
-header('location: StudentDashboard.php');
+  $_SESSION['student'] =($logged_in_student_id); // put logged in user in session
+  header('location:StudentDashboard.php');
 
 }
 
 }
 
+
 }
 
 }
-function getStudentById($id){
-	global $conn;
-	$query = "SELECT * FROM students WHERE id=" . $id;
-	$result = mysqli_query($conn, $query);
 
-	$student = mysqli_fetch_assoc($result);
-	return $student;
-}
+
 
 
 

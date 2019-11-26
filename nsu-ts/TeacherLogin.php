@@ -4,7 +4,7 @@
 
 session_start();
 
-ob_start();
+
 
 //connect to the database so we can check, edit, or insert data to our users table
 
@@ -65,31 +65,15 @@ $num = mysqli_num_rows($res);
 
 if($num == 0){
 
-//if not display error message
+	$message = "Incorrect Password.\\nTry again.";
+	  echo "<script type='text/javascript'>alert('$message');</script>";
+	}
+	else{
 
-echo "<center>The <b>Password</b> you supplied does not match the one for that Email!</center>";
+	  $logged_in_teacher_id = mysqli_fetch_assoc($res);
 
-}else{
-
-//if there was continue checking
-
-//split all fields fom the correct row into an associative array
-
-$row = mysqli_fetch_assoc($res);
-
-
-echo "<center>You have successfully logged in!</center>";
-
-//update the online field to 50 seconds into the future
-
-$time = date('U')+50;
-
-
-
-//redirect them to the usersonline page
-$_SESSION['teacher'] = getUserById($logged_in_teacher_id); // put logged in user in session
-$_SESSION['success']  = "You are now logged in";
-header('location: TeacherDashboard.php');
+	  $_SESSION['teacher'] =($logged_in_teacher_id); // put logged in user in session
+	  header('location:TeacherDashboard.php');
 
 }
 
@@ -98,21 +82,11 @@ header('location: TeacherDashboard.php');
 }
 
 }
-function getUserById($id){
-	global $conn;
-	$query = "SELECT * FROM teachers WHERE id=" . $id;
-	$result = mysqli_query($conn, $query);
-
-	$teacher = mysqli_fetch_assoc($result);
-	return $teacher;
-}
 
 
 
 
 
 
-
-ob_end_flush();
 
 ?>

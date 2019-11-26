@@ -1,12 +1,12 @@
 <?php
 require_once 'connect.php';
-include('StudentRegister.php');
-include('StudentLogin.php');
+include('TeacherRegister.php');
+include('TeacherLogin.php');
 
 
-if (isset($_GET['StudentSignout'])) {
+if (isset($_GET['TeacherSignout'])) {
 	session_destroy();
-	unset($_SESSION['student']);
+	unset($_SESSION['teacher']);
 	header('location: index.php');
 }
 ?>
@@ -49,8 +49,8 @@ if (isset($_GET['StudentSignout'])) {
               <div class="col-md-11 left nopadding">
                 <div class="header-left" >
                   <ul>
-                      <li><a href="StudentDashboard.php"><i class="fa fa-home" aria-hidden="true"> </i>Home</a></li>
-                      <li><a href="StudentProfile.php"><i class="fa fa-users" aria-hidden="true"></i>Profile</a></li>
+                      <li><a href="TeacherDashboard.php"><i class="fa fa-home" aria-hidden="true"> </i>Home</a></li>
+                      <li><a href="TeacherProfile.php"><i class="fa fa-users" aria-hidden="true"></i>Profile</a></li>
                       <li><a href="#preferences"><i class="fa fa-folder-open" aria-hidden="true"></i>Preferences</a></li>
                   </ul>
                </div>
@@ -61,7 +61,7 @@ if (isset($_GET['StudentSignout'])) {
                     <button class="dropbtn">SIGN OUT</button>
                     <div class="dropdown-content">
                       <a href="#">Settings</a>
-                      <a href="StudentSignout.php">Sign Out</a>
+                      <a href="TeacherSignout.php">Sign Out</a>
                     </div>
                   </div>
                </div>
@@ -73,13 +73,13 @@ if (isset($_GET['StudentSignout'])) {
     <!-- Header End -->
 
 
- <?php  if (isset($_SESSION['student'])) : ?>
+ <?php  if (isset($_SESSION['teacher'])) : ?>
     <!-- MAIN CONTAINER  Start -->
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="section-title">
-            <h3 align=left><?php echo $_SESSION['student']['first_name'].' '.$_SESSION['student']['last_name'];?></h3><BR>
+            <h3 align=left><?php echo $_SESSION['teacher']['first_name'].' '.$_SESSION['teacher']['last_name'];?></h3><BR>
 
 
 
@@ -105,12 +105,12 @@ if (isset($_GET['StudentSignout'])) {
                                                  <div class="col-md-6" align="left";>
 
                                                      <p>
-                                                        First Name: <?php echo $_SESSION['student']['first_name'];?><BR>
-                                                        Last Name: <?php echo $_SESSION['student']['last_name'];?><BR>
-                                                        Email: <?php echo $_SESSION['student']['email'];?><BR>
-                                                        Contact Number : <?php echo $_SESSION['student']['phone'];?><BR>
-                                                        Gender: <?php echo $_SESSION['student']['gender'];?><BR>
-                                                        Department: <?php echo $_SESSION['student']['department'];?><BR>
+                                                        First Name: <?php echo $_SESSION['teacher']['first_name'];?><BR>
+                                                        Last Name: <?php echo $_SESSION['teacher']['last_name'];?><BR>
+                                                        Email: <?php echo $_SESSION['teacher']['email'];?><BR>
+                                                        Contact Number : <?php echo $_SESSION['teacher']['phone'];?><BR>
+                                                        Gender: <?php echo $_SESSION['teacher']['gender'];?><BR>
+                                                        Department: <?php echo $_SESSION['teacher']['department'];?><BR>
 
                                                      </p>
 
