@@ -3,6 +3,13 @@ require_once 'connect.php';
 include('StudentRegister.php');
 include('StudentLogin.php');
 
+if(!isset($_SESSION['student']))
+{
+    // not logged in
+    header('Location: index.php');
+    exit();
+}
+
 
 if (isset($_GET['StudentSignout'])) {
 	session_destroy();
@@ -86,7 +93,7 @@ if (isset($_GET['StudentSignout'])) {
 
 
                          <?php endif ?>
-                         <div class="container">
+                         <div class="container" >
                              <div class="row my-2">
                                  <div class="col-lg-8 order-lg-2">
                                      <ul class="nav nav-tabs">
@@ -102,7 +109,7 @@ if (isset($_GET['StudentSignout'])) {
                                          <div class="tab-pane active" id="profile">
 
                                              <div class="row">
-                                                 <div class="col-md-6" align="left";>
+                                                 <div class="col-md-6" align="left" style="font-family: Book Antiqua";>
 
                                                      <p>
                                                         First Name: <?php echo $_SESSION['student']['first_name'];?><BR>
@@ -121,7 +128,7 @@ if (isset($_GET['StudentSignout'])) {
                                              <!--/row-->
                                          </div>
 
-                                         <div class="tab-pane" id="edit">
+                                         <div class="tab-pane" id="edit" align="left">
                                              <form role="form">
                                                  <div class="form-group row">
                                                      <label class="col-lg-3 col-form-label form-control-label">First name</label>

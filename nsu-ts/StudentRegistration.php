@@ -24,6 +24,9 @@ include('StudentRegister.php')
 
 <title>Student Registration | NSU-TS</title>
 <style>
+
+
+
 body, html {
 background-color: #ECF9FF;
   margin: 0;
@@ -96,20 +99,20 @@ background-color: #ECF9FF;
                                       <div class="col">
                                         <select name="gender" class="browser-default custom-select">
                                           <option selected>Gender</option>
-                                          <option value="male">Male</option>
-                                          <option value="female">Female</option>
-                                          <option value="others">Others</option>
+                                          <option value="Male">Male</option>
+                                          <option value="Female">Female</option>
+                                          <option value="Others">Others</option>
                                         </select>
                                     </div>
                                     <div class="col">
                                       <div class="col">
                                         <select name="department" class="browser-default custom-select">
                                           <option selected>Department</option>
-                                          <option value="ece">ECE</option>
-                                          <option value="bba">BBA</option>
-                                          <option value="arch">Architecture</option>
-                                          <option value="pharm">Pharmacy</option>
-                                          <option value="others">others</option>
+                                          <option value="ECE">ECE</option>
+                                          <option value="BBA">BBA</option>
+                                          <option value="Architecture">Architecture</option>
+                                          <option value="Pharmacy">Pharmacy</option>
+                                          <option value="Others">others</option>
 
                                         </select>
                                     </div>
@@ -134,7 +137,11 @@ background-color: #ECF9FF;
                             <!-- Terms of service -->
                             <p>By clicking
                                 <em> Register</em> you agree to our
-                                <a href="TOS.html" target="_blank">terms of service</a>
+                                <BR>
+
+                                <a class="btn btn-elegant" href="TOS.html" style="width:auto;">Terms of Services</a>
+
+
 
                      </form>
 

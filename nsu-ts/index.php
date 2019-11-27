@@ -190,10 +190,12 @@ background-color: #ECF9FF;
 
                           <BR>
 
+
+
                           <a class="btn btn-elegant" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Student</a>
                                                           <div id="id01" class="modal">
 
-                          <form class="modal-content animate" action="/StudentLogin.php" method="post">
+                          <form class="modal-content animate" action="StudentLogin.php" method="post">
 
                               <div class="imgcontainer">
                                   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -235,7 +237,7 @@ background-color: #ECF9FF;
 
                         <a class="btn btn-danger" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Teacher</a>
                         <div id="id02" class="modal">
-                          <form class="modal-content animate" action="/TeacherLogin.php" method="post">
+                          <form class="modal-content animate" action="TeacherLogin.php" method="post">
                               <div class="imgcontainer">
                                   <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
                                   <img src="images/student.jpg" alt="Avatar" class="avatar">
@@ -315,6 +317,48 @@ background-color: #ECF9FF;
              for NSU students to get help for their courses with proper tuition
               service. It's also a platform for the students who want to earn
                some money by giving tuitions to the students who need</p>
+               <a class="btn btn-light-green" onclick="document.getElementById('id03').style.display='block'" style="width:auto;color:black !important;border-radius:15px!important;">Admin</a>
+                                               <div id="id03" class="modal">
+
+               <form class="modal-content animate" action="AdminLogin.php" method="post">
+
+                   <div class="imgcontainer">
+                       <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+                       <img src="images/student.jpg" alt="Avatar" class="avatar">
+                   </div>
+
+
+                   <div class="container" style="font-family: Book Antiqua;">
+                       <h6> Admin Login</h6>
+
+                       <label for="email"><b>E-mail</b></label>
+                       <input type="email" placeholder="Enter E-mail" name="email" required>
+                       <label for="psw"><b>Password</b></label>
+                       <input type="password" placeholder="Enter your Password" name="password" required>
+                       <button type="submit" name="login_btn">Login</button>
+                       <label>
+                             <input type="checkbox" checked="checked" name="remember"> Remember me
+                       </label>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
+                       <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+                       <span class="psw"><a href="#">Forgot password?</a></span>
+                    </div>
+                 </form>
+             </div>
+
+                     <script>
+                     // Get the modal
+                     var modal = document.getElementById('id03');
+
+                     // When the user clicks anywhere outside of the modal, close it
+                     window.onclick = function(event) {
+                         if (event.target == modal) {
+                             modal.style.display = "none";
+                         }
+                     }
+                     </script>
         </div>
       </div>
       <div class="col-md-4">

@@ -3,7 +3,14 @@
 
 require_once 'connect.php';
 include('TeacherRegister.php');
+include('TeacherLogin.php');
 
+if(!isset($_SESSION['teacher']))
+{
+    // not logged in
+    header('Location: index.php');
+    exit();
+}
 
 
 if (isset($_GET['signout'])) {

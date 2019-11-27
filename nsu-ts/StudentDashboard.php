@@ -2,7 +2,14 @@
 <?php
 require_once 'connect.php';
 include('StudentRegister.php');
+include('StudentLogin.php');
 
+if(!isset($_SESSION['student']))
+{
+    // not logged in
+    header('Location: index.php');
+    exit();
+}
 
 if (isset($_GET['StudentSignout'])) {
 	session_destroy();

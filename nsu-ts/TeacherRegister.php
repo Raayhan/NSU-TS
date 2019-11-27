@@ -1,5 +1,10 @@
 <?php
-session_start();
+if(!isset($_SESSION))
+    {
+        session_start();
+    }
+
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -64,7 +69,7 @@ function register(){
 
     if (mysqli_query($conn, $query)) {
       $_SESSION['success']  = "New user successfully created!!";
-      header('location: TeacherDashboard.php');
+      header('location:TeacherDashboard.php');
       }
     else {
      echo "Error: " . $query . "<br>" . mysqli_error($conn);
@@ -78,7 +83,7 @@ function register(){
 
 			$_SESSION['teacher'] = getUserById($logged_in_teacher_id); // put logged in user in session
 			$_SESSION['success']  = "You are now logged in";
-			header('location: TeacherDashboard.php');
+			header('location:TeacherDashboard.php');
 		}
 
 
