@@ -1,6 +1,7 @@
 <?php
 require_once 'connect.php';
 include('StudentRegister.php');
+include('UpdateStudent.php');
 
 
 if(!isset($_SESSION['student']))
@@ -129,35 +130,35 @@ if (isset($_GET['StudentSignout'])) {
                                          </div>
 
                                          <div class="tab-pane" id="edit" align="left">
-                                             <form role="form">
+                                             <form method="POST" action="UpdateStudent.php" >
                                                  <div class="form-group row">
                                                      <label class="col-lg-3 col-form-label form-control-label">First name</label>
                                                      <div class="col-lg-9">
-                                                         <input class="form-control" type="text" value="" placeholder="First Name">
+                                                         <input class="form-control" type="text" name="first_name" placeholder="First Name">
                                                      </div>
                                                  </div>
                                                  <div class="form-group row">
                                                      <label class="col-lg-3 col-form-label form-control-label">Last name</label>
                                                      <div class="col-lg-9">
-                                                         <input class="form-control" type="text" value="" placeholder="Last Name">
+                                                         <input class="form-control" type="text" name="last_name" placeholder="Last Name">
                                                      </div>
                                                  </div>
                                                  <div class="form-group row">
                                                      <label class="col-lg-3 col-form-label form-control-label">Email</label>
                                                      <div class="col-lg-9">
-                                                         <input class="form-control" type="email" placeholder="Email">
+                                                         <input class="form-control" type="email" name="email" placeholder="Email">
                                                      </div>
                                                  </div>
                                                  <div class="form-group row">
                                                      <label class="col-lg-3 col-form-label form-control-label">Password</label>
                                                      <div class="col-lg-9">
-                                                         <input class="form-control" type="password" placeholder="Password">
+                                                         <input class="form-control" type="password" name="password" placeholder="Password">
                                                      </div>
                                                  </div>
                                                  <div class="form-group row">
                                                      <label class="col-lg-3 col-form-label form-control-label">Contact Number</label>
                                                      <div class="col-lg-9">
-                                                         <input class="form-control" type="number" placeholder="Contact Number">
+                                                         <input class="form-control" type="number" name="phone" placeholder="Contact Number">
                                                      </div>
                                                  </div>
 
@@ -167,14 +168,27 @@ if (isset($_GET['StudentSignout'])) {
                                                  <div class="form-group row">
                                                      <label class="col-lg-3 col-form-label form-control-label">Department</label>
                                                      <div class="col-lg-9">
-                                                         <select id="department" class="form-control" size="0">
-                                                             <option value="ece">ECE</option>
-                                                             <option value="bba">BBA</option>
-                                                             <option value="arch">Architecture</option>
-                                                             <option value="pharm">Pharmacy</option>
+                                                         <select id="department" class="form-control" size="0" name="department">
+                                                             <option value="ECE">ECE</option>
+                                                             <option value="BBA">BBA</option>
+                                                             <option value="Architecture">Architecture</option>
+                                                             <option value="Pharmacy">Pharmacy</option>
                                                          </select>
                                                      </div>
                                                  </div>
+
+                                                 <div class="form-group row">
+                                                     <label class="col-lg-3 col-form-label form-control-label">Gender</label>
+                                                     <div class="col-lg-9">
+                                                         <select id="gender" class="form-control" size="0" name="gender">
+                                                             <option value="Male">Male</option>
+                                                             <option value="Female">Female</option>
+                                                             <option value="Other">Others</option>
+
+                                                         </select>
+                                                     </div>
+                                                 </div>
+
 
 
 
@@ -182,7 +196,7 @@ if (isset($_GET['StudentSignout'])) {
                                                      <label class="col-lg-3 col-form-label form-control-label"></label>
                                                      <div class="col-lg-9">
                                                          <input type="reset" class="btn btn-danger" value="Cancel">
-                                                         <input type="button" class="btn btn-primary" value="Save Changes">
+                                                         <input type="submit" class="btn btn-primary" name ="save-btn" value="Save Changes">
                                                      </div>
                                                  </div>
                                              </form>
