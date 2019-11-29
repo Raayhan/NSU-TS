@@ -11,6 +11,8 @@ include('StudentLogin.php'); // Includes Login Script
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link href="https://fonts.googleapis.com/css?family=Marcellus+SC&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Coustard&display=swap" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/mdb.min.css" rel="stylesheet">
 <script src="scipts/script.js" type="text/javascript"></script>
@@ -182,7 +184,7 @@ background-color: #ECF9FF;
                <div class="section-title">
                     <div align='center'>
                       <BR><BR><BR>
-                      <div align='center' class="card text-center" style= "font-family: Copperplate Gothic Light; max-width: 50rem;">
+                      <div align='center' class="card text-center" style= "font-family: 'Coustard', serif; max-width: 50rem;">
                         <div class="card-header">NSU-TS</div>
                         <div class="card-body">
                           <h3 class="card-title">login</h3>
@@ -190,7 +192,7 @@ background-color: #ECF9FF;
 
                           <BR>
 
-                          <a class="btn btn-elegant" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Student</a>
+                          <a class="btn btn-elegant" onclick="document.getElementById('id01').style.display='block'" style="width:auto; text-transform:capitalize;">Student</a>
                                                           <div id="id01" class="modal">
 
                           <form class="modal-content animate" action="/StudentLogin.php" method="post">
@@ -201,7 +203,7 @@ background-color: #ECF9FF;
                               </div>
 
 
-                              <div class="container" style="font-family: Book Antiqua;">
+                              <div class="container" style="font-family: 'Coustard', serif;">
                                   <h6> Student Login</h6>
 
                                   <label for="email"><b>E-mail</b></label>
@@ -233,7 +235,7 @@ background-color: #ECF9FF;
                                 }
                                 </script>
 
-                        <a class="btn btn-danger" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Teacher</a>
+                        <a class="btn btn-danger" onclick="document.getElementById('id02').style.display='block'" style="width:auto;text-transform:capitalize;">Teacher</a>
                         <div id="id02" class="modal">
                           <form class="modal-content animate" action="/TeacherLogin.php" method="post">
                               <div class="imgcontainer">
@@ -242,7 +244,7 @@ background-color: #ECF9FF;
                               </div>
 
 
-                              <div class="container" style="font-family: Book Antiqua;">
+                              <div class="container" style="font-family: 'Coustard', serif;">
                                   <h6> Teacher Login</h6>
                                   <label for="TeacherEmail"><b>E-mail</b></label>
                                   <input type="email" placeholder="Enter E-mail" name="email" required>
@@ -300,39 +302,81 @@ background-color: #ECF9FF;
 
 
 
-<div class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2">
-        <div class="footer-logo">
-          <img src="images/logo.png">
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="footer-about">
-          <h2>About NSU-TS</h2>
-          <p>NSU-TS - North South University Tuition Services is a platform
-             for NSU students to get help for their courses with proper tuition
-              service. It's also a platform for the students who want to earn
-               some money by giving tuitions to the students who need</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="footer-news">
-          <h2>NEWSLETTER</h2>
-        </div>
-        <div class="formvalidation">
-          <div class="mainform">
-            <form name="myform" action="index.php" method="post" onsubmit="validate()">
-                <input type="email" name="email" placeholder="Enter Your Email">
-                <input class="submit-button" type="submit" name="Submit" value="SUBMIT">
-            </form>
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2">
+              <div class="footer-logo">
+                <img src="images/logo.png">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="footer-about">
+                <h2>About NSU-TS</h2>
+                <p>NSU-TS - North South University Tuition Services is a platform
+                   for NSU students to get help for their courses with proper tuition
+                    service. It's also a platform for the students who want to earn
+                     some money by giving tuitions to the students who need</p>
+
+                     <a class="btn btn-light-green" onclick="document.getElementById('id03').style.display='block'" style="width:auto;color:black !important;border-radius:15px!important;font-family: 'Coustard', serif;text-transform:capitalize;">Admin Panel</a>
+                                                     <div id="id03" class="modal">
+
+                     <form class="modal-content animate" action="AdminLogin.php" method="post" style="text-align:center;">
+
+                         <div class="imgcontainer">
+                             <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+                             <img src="images/student.jpg" alt="Avatar" class="avatar">
+                         </div>
+
+
+                         <div class="container" style="	font-family: 'Coustard', serif;">
+                             <h6> Admin Login</h6>
+
+                             <label for="email"><b>E-mail</b></label>
+                             <input type="email" placeholder="Enter E-mail" name="email" required>
+                             <label for="psw"><b>Password</b></label>
+                             <input type="password" placeholder="Enter your Password" name="password" required>
+                             <button type="submit" name="login_btn">Login</button>
+                             <label>
+                                   <input type="checkbox" checked="checked" name="remember"> Remember me
+                             </label>
+                          </div>
+
+                          <div class="container" style="background-color:#f1f1f1">
+                             <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+                             <span class="psw"><a href="#">Forgot password?</a></span>
+                          </div>
+                       </form>
+                   </div>
+
+                           <script>
+                           // Get the modal
+                           var modal = document.getElementById('id03');
+                           // When the user clicks anywhere outside of the modal, close it
+                           window.onclick = function(event) {
+                               if (event.target == modal) {
+                                   modal.style.display = "none";
+                               }
+                           }
+                           </script>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="footer-news">
+                <h2>NEWSLETTER</h2>
+              </div>
+              <div class="formvalidation">
+                <div class="mainform">
+                  <form name="myform" action="index.html" method="post" onsubmit="validate()">
+                      <input type="email" name="email" placeholder="Enter Your Email">
+                      <input class="submit-button" type="submit" name="Submit" value="SUBMIT">
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
 
 

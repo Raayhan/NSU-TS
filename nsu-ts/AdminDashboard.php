@@ -1,8 +1,8 @@
 <?php
 require_once 'connect.php';
-include('TeacherRegister.php');
+include('AdminLogin.php');
 
-if(!isset($_SESSION['teacher']))
+if(!isset($_SESSION['admin']))
 {
     // not logged in
     header('Location: index.php');
@@ -15,7 +15,7 @@ if(!isset($_SESSION['teacher']))
 
 if (isset($_GET['signout'])) {
 	session_destroy();
-	unset($_SESSION['teacher']);
+	unset($_SESSION['admin']);
 	header('location: index.php');
 }
 
@@ -39,7 +39,7 @@ if (isset($_GET['signout'])) {
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
-     <title>Home | NSU-TS</title>
+     <title>Admin Panel | NSU-TS</title>
    </head>
    <body>
 
@@ -56,9 +56,9 @@ if (isset($_GET['signout'])) {
                <div class="col-md-11 left nopadding">
                  <div class="header-left">
                    <ul>
-                       <li style="background-color: #60151A;"><a href="TeacherDashboard.php"><i class="fa fa-home" aria-hidden="true"> </i>Home</a></li>
-                       <li><a href="TeacherProfile.php"><i class="fa fa-users" aria-hidden="true"></i>Profile</a></li>
-                       <li><a href="T_Preferences.php"><i class="fa fa-folder-open" aria-hidden="true"></i>Preferences</a></li>
+                       <li style="background-color: #60151A;"><a href="AdminDashboard.php">Admin Panel</a></li>
+                       <li><a href="AdminProfile.php">Profile</a></li>
+                       <li><a href="T_Preferences.php">Preferences</a></li>
                    </ul>
                 </div>
                </div>
@@ -68,7 +68,7 @@ if (isset($_GET['signout'])) {
                      <button class="dropbtn">SIGN OUT</button>
                      <div class="dropdown-content">
                        <a href="#">Settings</a>
-                       <a href="TeacherSignout.php">Sign Out</a>
+                       <a href="AdminSignout.php">Sign Out</a>
                      </div>
                    </div>
                 </div>
@@ -92,10 +92,10 @@ if (isset($_GET['signout'])) {
 
              <h2>Welcome  !</h2>
 
-             <?php  if (isset($_SESSION['teacher'])) : ?>
+             <?php  if (isset($_SESSION['admin'])) : ?>
 
                <html>
-                    <h6 style="font-family: 'Coustard', serif;"><?php echo $_SESSION['teacher']['first_name'].' '.$_SESSION['teacher']['last_name'];?></h6>
+                    <h6 style="font-family: 'Coustard', serif;"><?php echo $_SESSION['admin']['first_name'];?></h6>
 
                </html>
 

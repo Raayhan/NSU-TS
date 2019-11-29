@@ -2,7 +2,14 @@
 <?php
 require_once 'connect.php';
 include('StudentRegister.php');
+include('StudentLogin.php');
 
+if(!isset($_SESSION['student']))
+{
+    // not logged in
+    header('Location: index.php');
+    exit();
+}
 
 if (isset($_GET['StudentSignout'])) {
 	session_destroy();
@@ -17,12 +24,13 @@ if (isset($_GET['StudentSignout'])) {
 
 <!doctype html>
 <html lang="en">
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Marcellus+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coustard&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <script src="scripts/script.js" type="text/javascript"></script>
@@ -49,9 +57,9 @@ if (isset($_GET['StudentSignout'])) {
               <div class="col-md-11 left nopadding">
                 <div class="header-left" >
                   <ul>
-                      <li><a href="StudentDashboard"><i class="fa fa-home" aria-hidden="true"> </i>Home</a></li>
-                      <li><a href="StudentProfile.php"><i class="fa fa-users" aria-hidden="true"></i>Profile</a></li>
-                      <li><a href="#preferences"><i class="fa fa-folder-open" aria-hidden="true"></i>Preferences</a></li>
+                      <li style="background-color: #60151A;"><a href="StudentDashboard">Home</a></li>
+                      <li><a href="StudentProfile.php">Profile</a></li>
+                      <li><a href="#preferences">Preferences</a></li>
                   </ul>
                </div>
               </div>
@@ -84,13 +92,14 @@ if (isset($_GET['StudentSignout'])) {
                          <?php  if (isset($_SESSION['student'])) : ?>
 
                            <html>
-                                <h4 style="font-family:Book Antiqua;"><?php echo $_SESSION['student']['first_name'].' '.$_SESSION['student']['last_name'];?></h4>
+                                <h6 style="font-family: 'Coustard', serif;"><?php echo $_SESSION['student']['first_name'].' '.$_SESSION['student']['last_name'];?></h6>
 
                            </html>
 
                          <?php endif ?>
+                         <BR>
 
-            <p>Please select your desired category for courses</p>
+            <h5>Please select your desired category for courses</h5>
           </div>
         </div>
       </div>

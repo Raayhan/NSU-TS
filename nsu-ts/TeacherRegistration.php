@@ -13,6 +13,8 @@ include('TeacherRegister.php')
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link href="https://fonts.googleapis.com/css?family=Marcellus+SC&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Coustard&display=swap" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/mdb.min.css" rel="stylesheet">
 <script src="scripts/script.js" type="text/javascript"></script>
@@ -52,16 +54,43 @@ background-color: #ECF9FF;
                   <a href="index.php"><img src="images/logo.png">North South University Tuition Services</a>
                 </div>
               </div>
+              <div class="col-md-12 nopadding">
+                <div class="header">
+                    <div class="col-md-11 left nopadding">
+                      <div class="header-left">
+                        <ul>
+                            <li><a href="index.php"><i class="fa fa-id-badge" aria-hidden="true"> </i>Login</a></li>
+
+
+                        </ul>
+                     </div>
+                    </div>
+                    <div class="col-md-1 right nopadding">
+                      <div class="header-right">
+
+                        <div class="dropdown">
+                          <button class="dropbtn">Register</button>
+                          <div class="dropdown-content">
+                            <a href="StudentRegistration.php">As Student</a>
+                            <a href="TeacherRegistration.php">As Teacher</a>
+                          </div>
+                        </div>
+                     </div>
+                    </div>
+
+                </div>
+              </div>
             </div>
           </div>
+
             <div class="bg">
                <div class="section-title">
                     <div align='center'>
                       <BR><BR><BR>
-                        <div align='center' class="card text-center" style= "font-family: Book Antiqua; max-width: 50rem;">
+                        <div align='center' class="card text-center" style= "font-family: 'Coustard', serif; max-width: 50rem;">
                         <form class="text-center border border-light p-5" method="POST" action="TeacherRegister.php">
                             <?php echo display_error(); ?>
-                            <h4 class="h4 mb-4">Teacher Registration</h4>
+                            <h3 class="h4 mb-4">Teacher Registration</h3>
 
                             <div class="form-row mb-4">
                                 <div class="col">
@@ -96,20 +125,20 @@ background-color: #ECF9FF;
                                       <div class="col">
                                         <select name="gender" class="browser-default custom-select">
                                           <option selected>Gender</option>
-                                          <option value="male">Male</option>
-                                          <option value="female">Female</option>
-                                          <option value="others">Others</option>
+                                          <option value="Male">Male</option>
+                                          <option value="Female">Female</option>
+                                          <option value="Others">Others</option>
                                         </select>
                                     </div>
                                     <div class="col">
                                       <div class="col">
                                         <select name="department" class="browser-default custom-select">
                                           <option selected>Department</option>
-                                          <option value="ece">ECE</option>
-                                          <option value="bba">BBA</option>
-                                          <option value="arch">Architecture</option>
-                                          <option value="pharm">Pharmacy</option>
-                                          <option value="others">others</option>
+                                          <option value="ECE">ECE</option>
+                                          <option value="BBA">BBA</option>
+                                          <option value="Architecture">Architecture</option>
+                                          <option value="Pharmacy">Pharmacy</option>
+                                          <option value="Others">others</option>
 
                                         </select>
                                     </div>
@@ -133,8 +162,8 @@ background-color: #ECF9FF;
 
                             <!-- Terms of service -->
                             <p>By clicking
-                                <em> Register</em> you agree to our
-                                <a href="TOS.html" target="_blank">terms of service</a>
+                                <em> Register</em> you agree to our<BR>
+                                <a class="btn btn-elegant" href="TOS.html" style="width:auto;">Terms of Services</a>
 
                      </form>
 

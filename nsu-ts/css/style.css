@@ -32,15 +32,15 @@ img{
 .title {
     text-align: center;
     overflow: hidden;
-    background-color: #ECF9FF;
+    background-color:  #ECF9FF;
     padding: 10px 0;
 }
 .title a {
-    color: #0D012C;
-    text-decoration: none;
+    color: black;
+
     line-height: 25px;
     font-size: 28px;
-		font-family: Copperplate Gothic Light;
+		font-family: 'Marcellus SC', serif;
     font-weight: bold;
 
 }
@@ -66,14 +66,15 @@ img{
     padding: 10px 20px;
     color: #fff;
     font-size: 12px;
-		font-family: Copperplate Gothic Light;
+		font-family: 'Coustard', serif;
+		text-transform: uppercase;
     float: left;
-    text-decoration: none;
+
 }
 .header-left ul li a:hover {
     color: #fff;
     background-color: #60151A;
-    text-decoration: none;
+
 }
 .header-left i{
 	padding-right: 5px;
@@ -95,10 +96,11 @@ img{
 .header-right ul li a {
     padding: 10px 20px;
     color: #fff;
-    font-size: 16px;
-    font-family: Copperplate Gothic Light;
+    font-size: 12px;
+    font-family: 'Coustard', serif;
+		test-transform: uppercase;
     float: right;
-    text-decoration: none;
+
 }
 .header-right ul li a:hover {
     color: #fff;
@@ -106,10 +108,11 @@ img{
     text-decoration: none;
 }
 .dropbtn {
-    background-color: #60151A;
+    background-color:#60151A;
     color: white;
     padding: 10px;
-		font-family: Copperplate Gothic Light;
+  	font-family: 'Coustard', serif;
+		text-transform: uppercase;
     font-size: 12px;
     border:none;
     cursor: pointer;
@@ -135,10 +138,10 @@ img{
 .dropdown-content a {
     color: #fff;
     padding: 10px;
-    text-decoration: none;
     display: block;
-    font-size: 12px;
-    font-family: Copperplate Gothic Light;
+    font-size: 10px;
+    font-family: 'Coustard', serif;
+		text-transform: uppercase;
 }
 
 .dropdown-content a:hover {
@@ -148,7 +151,7 @@ img{
 
 .dropdown:hover .dropdown-content {
   display: block;
-  text-decoration: none;
+
 }
 
 .dropdown:hover .dropbtn {
@@ -156,21 +159,26 @@ img{
 }
 /* Header CSS - END */
 
-
+.profile-title {
+    text-align: center;
+    overflow: hidden;
+    padding: 20px 0;
+	  font-family: 'Coustard', serif;
+}
 
 /* SECTION CSS - Start */
 .section-title {
     text-align: center;
     overflow: hidden;
     padding: 20px 0;
-		font-family: Cooperplate Gothic Light;
+		font-family: 'Marcellus SC', serif;
 }
 .section-title h2 {
     color: #0D012C;
     text-decoration: none;
     line-height: 25px;
     font-size: 36px;
-    font-family: Copperplate Gothic Light;
+    font-family: 'Marcellus SC', serif;
     font-weight: 400;
 }
 .section-title h3 {
@@ -178,7 +186,7 @@ img{
     text-decoration: none;
     line-height: 25px;
     font-size: 28px;
-    font-family: Copperplate Gothic Light;
+    font-family: 'Marcellus SC', serif;
     font-weight: 400;
 }
 .section-title h4 {
@@ -186,7 +194,7 @@ img{
     text-decoration: none;
     line-height: 25px;
     font-size: 22px;
-    font-family: Copperplate Gothic Light;
+    font-family: 'Marcellus SC', serif;
     font-weight: 400;
 }
 .section-title p {
@@ -194,7 +202,7 @@ img{
     text-decoration: none;
     line-height: 25px;
     font-size: 14px;
-    font-family: Copperplate Gothic Light;
+    font-family: 'Marcellus SC', serif;
     font-weight: bold;
 }
 
@@ -217,12 +225,12 @@ img{
 .my-box-title{
 	color: #fff;
 	font-size: 20px;
-	font-family: Copperplate Gothic Light;
+	font-family: 'Marcellus SC', serif;
 }
 .my-box-text{
 	color: #fff;
 	font-size: 12px;
-	font-family: Copperplate Gothic Light;
+	font-family: 'Marcellus SC', serif;
 	height: 50px;
 }
 .box-button {
@@ -233,7 +241,7 @@ img{
     padding: 5px 20px;
 		border-radius: 15px;
     background-color: #0D012C;
-    font-family: Copperplate Gothic Light;
+    font-family: 'Marcellus SC', serif;
 }
 .box-button:hover {
     background-color: #3E8D41;
@@ -259,7 +267,7 @@ img{
     text-decoration: none;
     line-height: 25px;
     font-size: 20px;
-    font-family: Copperplate Gothic Light;
+    font-family:'Marcellus SC', serif;
     font-weight: bold;
 }
 .footer-about p{
@@ -267,7 +275,7 @@ img{
     text-decoration: none;
     line-height: 20px;
     font-size: 12px;
-    font-family: Copperplate Gothic Light;
+    font-family: 'Coustard', serif;
     font-weight: none;
 }
 
@@ -289,7 +297,7 @@ img{
     text-decoration: none;
     line-height: 16px;
     font-size: 20px;
-    font-family: Copperplate Gothic Light;
+    font-family: 'Marcellus SC', serif;
     font-weight: 200;
     margin:0;
 }
@@ -303,10 +311,13 @@ input{
     cursor: pointer;
 		border-radius:15px;
 		padding: 5px 20px;
-		font-family: Copperplate Gothic Light;
+		font-family: 'Marcellus SC', serif;
 		font-size: 12px;
 }
 .submit-button:hover{
 	background-color: #3E8D41;
 	color:#fff;
+}
+.profile{
+	font-family: 'Coustard', serif;
 }

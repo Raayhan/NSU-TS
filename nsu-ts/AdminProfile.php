@@ -1,9 +1,10 @@
 <?php
 require_once 'connect.php';
-include('TeacherRegister.php');
+include('AdminLogin.php');
 
 
-if(!isset($_SESSION['teacher']))
+
+if(!isset($_SESSION['admin']))
 {
     // not logged in
     header('Location: index.php');
@@ -13,9 +14,9 @@ if(!isset($_SESSION['teacher']))
 
 
 
-if (isset($_GET['TeacherSignout'])) {
+if (isset($_GET['AdminSignout'])) {
 	session_destroy();
-	unset($_SESSION['teacher']);
+	unset($_SESSION['admin']);
 	header('location: index.php');
 }
 ?>
@@ -59,9 +60,9 @@ if (isset($_GET['TeacherSignout'])) {
               <div class="col-md-11 left nopadding">
                 <div class="header-left" >
                   <ul>
-                      <li><a href="TeacherDashboard.php"><i class="fa fa-home" aria-hidden="true"> </i>Home</a></li>
-                      <li style="background-color: #60151A;"><a href="TeacherProfile.php"><i class="fa fa-users" aria-hidden="true"></i>Profile</a></li>
-                      <li><a href="#preferences"><i class="fa fa-folder-open" aria-hidden="true"></i>Preferences</a></li>
+                      <li><a href="AdminDashboard.php">Admin Panel</a></li>
+                      <li style="background-color: #60151A;"><a href="AdminProfile.php">Profile</a></li>
+                      <li><a href="#preferences"></i>Preferences</a></li>
                   </ul>
                </div>
               </div>
@@ -71,7 +72,7 @@ if (isset($_GET['TeacherSignout'])) {
                     <button class="dropbtn">SIGN OUT</button>
                     <div class="dropdown-content">
                       <a href="#">Settings</a>
-                      <a href="TeacherSignout.php">Sign Out</a>
+                      <a href="AdminSignout.php">Sign Out</a>
                     </div>
                   </div>
                </div>
@@ -83,13 +84,13 @@ if (isset($_GET['TeacherSignout'])) {
     <!-- Header End -->
 
 
- <?php  if (isset($_SESSION['teacher'])) : ?>
+ <?php  if (isset($_SESSION['admin'])) : ?>
     <!-- MAIN CONTAINER  Start -->
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="section-title">
-            <h3 align=center>Profile | <?php echo $_SESSION['teacher']['first_name'].' '.$_SESSION['teacher']['last_name'];?></h3><BR>
+            <h3 align=center>Profile | <?php echo $_SESSION['admin']['first_name'];?></h3><BR>
 
           </div>
           <div class="profile-title">
@@ -116,12 +117,9 @@ if (isset($_GET['TeacherSignout'])) {
                                                  <div class="col-md-6" align="left";>
 
                                                      <p>
-                                                        First Name: <?php echo $_SESSION['teacher']['first_name'];?><BR><BR>
-                                                        Last Name: <?php echo $_SESSION['teacher']['last_name'];?><BR><BR>
-                                                        Email: <?php echo $_SESSION['teacher']['email'];?><BR><BR>
-                                                        Contact Number : <?php echo $_SESSION['teacher']['phone'];?><BR><BR>
-                                                        Gender: <?php echo $_SESSION['teacher']['gender'];?><BR><BR>
-                                                        Department: <?php echo $_SESSION['teacher']['department'];?><BR><BR>
+                                                        Name: <?php echo $_SESSION['admin']['first_name'];?><BR><BR>
+                                                        Email: <?php echo $_SESSION['admin']['email'];?><BR><BR>
+                                                        Contact Number : <?php echo $_SESSION['admin']['phone'];?><BR><BR>
 
                                                      </p>
 
@@ -140,12 +138,7 @@ if (isset($_GET['TeacherSignout'])) {
                                                          <input class="form-control" type="text" value="" placeholder="First Name">
                                                      </div>
                                                  </div>
-                                                 <div class="form-group row">
-                                                     <label class="col-lg-3 col-form-label form-control-label">Last name</label>
-                                                     <div class="col-lg-9">
-                                                         <input class="form-control" type="text" value="" placeholder="Last Name">
-                                                     </div>
-                                                 </div>
+
                                                  <div class="form-group row">
                                                      <label class="col-lg-3 col-form-label form-control-label">Email</label>
                                                      <div class="col-lg-9">
@@ -164,24 +157,6 @@ if (isset($_GET['TeacherSignout'])) {
                                                          <input class="form-control" type="number" placeholder="Contact Number">
                                                      </div>
                                                  </div>
-
-
-
-
-                                                 <div class="form-group row">
-                                                     <label class="col-lg-3 col-form-label form-control-label">Department</label>
-                                                     <div class="col-lg-9">
-                                                         <select id="department" class="form-control" size="0">
-                                                             <option value="ece">ECE</option>
-                                                             <option value="bba">BBA</option>
-                                                             <option value="arch">Architecture</option>
-                                                             <option value="pharm">Pharmacy</option>
-                                                         </select>
-                                                     </div>
-                                                 </div>
-
-
-
                                                  <div class="form-group row">
                                                      <label class="col-lg-3 col-form-label form-control-label"></label>
                                                      <div class="col-lg-9">
@@ -189,6 +164,7 @@ if (isset($_GET['TeacherSignout'])) {
                                                          <input type="button" class="btn btn-primary" value="Save Changes">
                                                      </div>
                                                  </div>
+
                                              </form>
                                          </div>
                                      </div>

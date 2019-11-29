@@ -41,7 +41,7 @@ echo "<center>You need to fill in a <b>Username</b> and a <b>Password</b>!</cent
 
 //select all rows from the table where the username matches the one entered by the user
 
-$res = mysqli_query($conn,"SELECT * FROM `students` WHERE `email` = '".$email."'");
+$res = mysqli_query($conn,"SELECT * FROM `admin` WHERE `email` = '".$email."'");
 
 $num = mysqli_num_rows($res);
 
@@ -59,7 +59,7 @@ echo "<center>The <b>Username</b> you supplied does not exist!</center>";
 
 //select all rows where the username and password match the ones submitted by the user
 
-$res = mysqli_query($conn,"SELECT * FROM `students` WHERE `email` = '".$email."' AND `password` = '".$password."'");
+$res = mysqli_query($conn,"SELECT * FROM `admin` WHERE `email` = '".$email."' AND `password` = '".$password."'");
 
 $num = mysqli_num_rows($res);
 
@@ -74,10 +74,10 @@ $message = "Incorrect Password.\\nTry again.";
 }
 else{
 
-  $logged_in_student_id = mysqli_fetch_assoc($res);
+  $logged_in_admin_id = mysqli_fetch_assoc($res);
 
-  $_SESSION['student'] =($logged_in_student_id); // put logged in user in session
-  header('location:StudentDashboard.php');
+  $_SESSION['admin'] =($logged_in_admin_id); // put logged in user in session
+  header('location:AdminDashboard.php');
 
 }
 
