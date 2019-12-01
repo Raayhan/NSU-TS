@@ -138,7 +138,8 @@ background-color: #ECF9FF;
                                           <option value="BBA">BBA</option>
                                           <option value="Architecture">Architecture</option>
                                           <option value="Pharmacy">Pharmacy</option>
-                                          <option value="Others">others</option>
+                                          <option value="Civil">Civil Enngineering</option>
+                                          <option value="Others">Others</option>
 
                                         </select>
                                     </div>
