@@ -1,6 +1,7 @@
 <?php
 require_once 'connect.php';
 include('AdminLogin.php');
+include('StudentSearch.php');
 
 if(!isset($_SESSION['admin']))
 {
@@ -21,7 +22,6 @@ if (isset($_GET['signout'])) {
 
 ?>
 
-
  <!doctype html>
  <html lang="en">
    <head>
@@ -35,11 +35,61 @@ if (isset($_GET['signout'])) {
      <script src="scripts/script.js" type="text/javascript"></script>
 
 
+
+
+    <style>
+      table,th,td {
+        border : 1px solid black;
+        border-collapse: collapse;
+      }
+      th,td {
+        padding: 5px;
+      }
+  </style>
+
+
      <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
      <title>Admin Panel | NSU-TS</title>
+     <script>
+     // Search name without loading page
+          function searchStudentName(str){
+            if(str.length == 0){
+              document.getElementById('suggestion').innerHTML = '';
+            }
+            else{
+              var xmlhttp = new XMLHttpRequest();
+              xmlhttp.onreadystatechange = function() {
+                  if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("suggestion").innerHTML = this.responseText;
+                }
+              };
+              xmlhttp.open("GET", "StudentSearch.php?student="+ str , true);
+              xmlhttp.send();
+            }
+
+          }
+
+          function searchTeacherName(str){
+            if(str.length == 0){
+              document.getElementById('suggestionT').innerHTML = '';
+            }
+            else{
+              var xmlhttp = new XMLHttpRequest();
+              xmlhttp.onreadystatechange = function() {
+                  if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("suggestionT").innerHTML = this.responseText;
+                }
+              };
+              xmlhttp.open("GET", "TeacherSearch.php?teacher="+ str , true);
+              xmlhttp.send();
+            }
+
+          }
+     </script>
+
    </head>
    <body>
 
@@ -98,9 +148,58 @@ if (isset($_GET['signout'])) {
                     <h6 style="font-family: 'Coustard', serif;"><?php echo $_SESSION['admin']['first_name'];?></h6>
 
                </html>
+               <div class="profile-title">
 
-             <?php endif ?>
 
+
+                              <?php endif ?>
+                              <div class="container">
+                                  <div class="row my-2">
+                                      <div class="col-lg-8 order-lg-2">
+                                          <ul class="nav nav-tabs">
+                                              <li class="nav-item">
+                                                  <a href="" data-target="#student" data-toggle="tab" class="nav-link active">Student Data</a>
+                                              </li>
+
+                                              <li class="nav-item">
+                                                  <a href="" data-target="#teacher" data-toggle="tab" class="nav-link">Teacher Data </a>
+                                              </li>
+                                          </ul>
+                                          <div class="tab-content py-4">
+                                              <div class="tab-pane active" id="student"><BR><BR>
+
+
+
+                                                 <div class="">
+                                                     <label for="">Student Name:  </label>
+                                                     <input type="text" name="name" value="" placeholder="Type Student Name" onkeyup="searchStudentName(this.value)">
+                                                     <p><span  id="suggestion"></span> </p>
+
+                                                 </div>
+
+
+                                                                                                  <!--/row-->
+                                              </div>
+
+                                              <div class="tab-pane" id="teacher"><BR><BR>
+
+                                                   <div class="">
+                                                       <label for="">Teacher Name: </label>
+                                                       <input type="text" name="name" value="" placeholder="Type Teacher Name" onkeyup="searchTeacherName(this.value)">
+                                                       <p><span  id="suggestionT"></span> </p>
+
+                                                   </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-2 order-lg-21 text-center">
+                                          <img src="images/student.jpg" width="100px" height="150px"  alt="avatar" style="border-radius: 50%;">
+
+
+                                      </div>
+                                  </div>
+                              </div>
+               </div>
            </div>
          </div>
        </div>

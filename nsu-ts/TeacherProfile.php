@@ -113,15 +113,18 @@ if (isset($_GET['TeacherSignout'])) {
                                          <div class="tab-pane active" id="profile">
 
                                              <div class="row">
-                                                 <div class="col-md-6" align="left";>
+                                                 <div class="col-md-6";>
                                                    <div align='left' class="card border-primary mb-3" style="width:300rem; padding-left: 30px; padding-top:20px;">
                                                        <p>
-                                                          <font color="red">  First Name :</font>   <?php echo $_SESSION['teacher']['first_name'];?><BR><BR>
-                                                          <font color="red">  Last Name :</font> <?php echo $_SESSION['teacher']['last_name'];?><BR><BR>
+                                                          <font color="red">  User Type :</font>   Teacher<BR><BR>
+                                                          <font color="red">  Name :</font>   <?php echo $_SESSION['teacher']['first_name'].' '.$_SESSION['teacher']['last_name'];?><BR><BR>
                                                           <font color="red">  Email No : </font> <?php echo $_SESSION['teacher']['email'];?><BR><BR>
                                                           <font color="red">  Contact No :</font> <?php echo $_SESSION['teacher']['phone'];?><BR><BR>
                                                           <font color="red">  Gender :</font> <?php echo $_SESSION['teacher']['gender'];?><BR><BR>
                                                           <font color="red">  Department :</font> <?php echo $_SESSION['teacher']['department'];?><BR><BR>
+
+
+
 
                                                        </p>
                                                     </div>
@@ -209,7 +212,7 @@ if (isset($_GET['TeacherSignout'])) {
                                      </div>
                                  </div>
                                  <div class="col-lg-2 order-lg-21 text-center">
-                                     <img src="images/student.jpg" width="100px" height="150px"  alt="avatar">
+                                     <img src="images/student.jpg" width="100px" height="150px"  alt="avatar" style="border-radius: 50%;">
 
 
                                  </div>

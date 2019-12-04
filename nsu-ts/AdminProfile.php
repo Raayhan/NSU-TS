@@ -169,8 +169,11 @@ if (isset($_GET['AdminSignout'])) {
                                          </div>
                                      </div>
                                  </div>
-                                 <div class="col-lg-3 order-lg-1 text-center">
-                                     <img src="images/student.jpg" width="100px" height="200px"  alt="avatar">
+                                 <div class="col-lg-2 order-lg-21 text-center">
+                                     <img src="images/student.jpg" width="100px" height="150px"  alt="avatar" style="border-radius: 50%;">
+
+
+                                 </div>
 
 
                                  </div>

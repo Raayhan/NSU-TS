@@ -113,8 +113,8 @@ if (isset($_GET['StudentSignout'])) {
                                                  <div class="col-md-6" align="left">
                                                      <div align='left' class="card border-primary mb-3" style="width:300rem; padding-left: 30px; padding-top:20px;">
                                                          <p>
-                                                              <font color="red">  First Name :</font>  <?php echo $_SESSION['student']['first_name'];?><BR><BR>
-                                                              <font color="red">  Last Name :</font> <?php echo $_SESSION['student']['last_name'];?><BR><BR>
+                                                              <font color="red">  User Type :</font>   Student<BR><BR>
+                                                              <font color="red">  Name :</font>  <?php echo $_SESSION['student']['first_name'].' '.$_SESSION['student']['last_name'];?><BR><BR>
                                                               <font color="red">  Email No : </font> <?php echo $_SESSION['student']['email'];?><BR><BR>
                                                               <font color="red">  Contact No :</font> <?php echo $_SESSION['student']['phone'];?><BR><BR>
                                                               <font color="red">  Gender : </font><?php echo $_SESSION['student']['gender'];?><BR><BR>
@@ -207,7 +207,7 @@ if (isset($_GET['StudentSignout'])) {
                                      </div>
                                  </div>
                                  <div class="col-lg-2 order-lg-21 text-center">
-                                     <img src="images/student.jpg" width="100px" height="150px"  alt="avatar">
+                                     <img src="images/student.jpg" width="100px" height="150px"  alt="avatar" style="border-radius: 50%;">
 
 
                                  </div>
