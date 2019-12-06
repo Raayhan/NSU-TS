@@ -18,6 +18,7 @@ include('StudentRegister.php')
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/mdb.min.css" rel="stylesheet">
 <script src="scripts/script.js" type="text/javascript"></script>
+<script src="https://use.fontawesome.com/56f6746f8e.js"></script>
 
 
 <!-- Bootstrap CSS -->
@@ -62,7 +63,7 @@ background-color: #ECF9FF;
                     <div class="col-md-11 left nopadding">
                       <div class="header-left">
                         <ul>
-                            <li><a href="index.php"><i class="fa fa-id-badge" aria-hidden="true"> </i>Login</a></li>
+                            <li><a href="index.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
 
 
                         </ul>
@@ -72,10 +73,10 @@ background-color: #ECF9FF;
                       <div class="header-right">
 
                         <div class="dropdown">
-                          <button class="dropbtn">Register</button>
+                          <button class="dropbtn"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</button>
                           <div class="dropdown-content">
-                            <a href="StudentRegistration.php">As Student</a>
-                            <a href="TeacherRegistration.php">As Teacher</a>
+                            <a href="StudentRegistration.php"><i class="fa fa-male" aria-hidden="true"></i> As Student</a>
+                            <a href="TeacherRegistration.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> As Teacher</a>
                           </div>
                         </div>
                      </div>
@@ -92,9 +93,11 @@ background-color: #ECF9FF;
                         <div align='center' class="card text-center" style= "font-family: 'Coustard', serif; max-width: 50rem;">
                         <form class="text-center border border-light p-5" method="POST" action="StudentRegister.php">
                             <?php echo display_error(); ?>
-                            <h3 class="h4 mb-4">Student Registration</h3>
+                            <h3 class="h4 mb-4"><i class="fa fa-id-card" aria-hidden="true"></i> Student Registration</h3>
+
 
                             <div class="form-row mb-4">
+
                                 <div class="col">
                                     <!-- First name -->
                                     <input type="text" name="first_name" class="form-control" placeholder="First name">
@@ -150,13 +153,13 @@ background-color: #ECF9FF;
 
 
                             <!-- Sign up button -->
-                            <button class="btn btn-unique my-4 btn-block" name="register_btn" type="submit">Register</button>
+                            <button class="btn btn-dark-green my-4 btn-block" name="register_btn" type="submit"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</button>
 
                             <!-- Social register -->
                             <p>or register with</p>
 
-                            <a href="#" class="btn btn-indigo btn-sm" role="button" aria-pressed="true">Facebook</a>
-                            <a href="#" class="btn btn-deep-orange btn-sm" role="button" aria-pressed="true">Google</a>
+                            <a href="#" class="btn btn-indigo btn-sm" role="button" aria-pressed="true"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
+                            <a href="#" class="btn btn-deep-orange btn-sm" role="button" aria-pressed="true"><i class="fa fa-google" aria-hidden="true"></i> Google</a>
 
 
 
@@ -167,7 +170,7 @@ background-color: #ECF9FF;
                                 <em> Register</em> you agree to our
                                 <BR>
 
-                                <a class="btn btn-elegant" href="TOS.html" style="width:auto;">Terms of Services</a>
+                                <a class="btn btn-elegant" href="TOS.html" style="width:auto;"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Terms of Services</a>
 
 
 

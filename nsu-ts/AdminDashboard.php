@@ -33,7 +33,7 @@ if (isset($_GET['signout'])) {
      <link rel="stylesheet" type="text/css" href="css/style.css">
      <link rel="stylesheet" type="text/css" href="css/responsive.css">
      <script src="scripts/script.js" type="text/javascript"></script>
-
+    <script src="https://use.fontawesome.com/56f6746f8e.js"></script>
 
 
 
@@ -98,7 +98,7 @@ if (isset($_GET['signout'])) {
        <div class="row">
          <div class="col-md-12 nopadding">
            <div class="title">
-             <a href="StudentDashboard.php"><img src="images/logo.png">North South University Tuition Services</a>
+             <a href="AdminDashboard.php"><img src="images/logo.png">North South University Tuition Services</a>
            </div>
          </div>
          <div class="col-md-12 nopadding">
@@ -106,19 +106,19 @@ if (isset($_GET['signout'])) {
                <div class="col-md-11 left nopadding">
                  <div class="header-left">
                    <ul>
-                       <li style="background-color: #60151A;"><a href="AdminDashboard.php">Admin Panel</a></li>
-                       <li><a href="AdminProfile.php">Profile</a></li>
-                       <li><a href="T_Preferences.php">Preferences</a></li>
+                       <li style="background-color: #60151A;"><a href="AdminDashboard.php"><i class="fa fa-cogs" aria-hidden="true"></i> Admin Panel</a></li>
+                       <li><a href="AdminProfile.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Profile</a></li>
+
                    </ul>
                 </div>
                </div>
                <div class="col-md-1 left nopadding">
                  <div class="header-right">
                    <div class="dropdown">
-                     <button class="dropbtn">SIGN OUT</button>
+                     <button class="dropbtn"><i class="fa fa-power-off" aria-hidden="true"></i> SIGN OUT</button>
                      <div class="dropdown-content">
-                       <a href="#">Settings</a>
-                       <a href="AdminSignout.php">Sign Out</a>
+                       <a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a>
+                       <a href="AdminSignout.php"><i class="fa fa-power-off" aria-hidden="true"></i> Sign Out</a>
                      </div>
                    </div>
                 </div>
@@ -158,21 +158,21 @@ if (isset($_GET['signout'])) {
                                       <div class="col-lg-8 order-lg-2">
                                           <ul class="nav nav-tabs">
                                               <li class="nav-item">
-                                                  <a href="" data-target="#student" data-toggle="tab" class="nav-link active">Student Data</a>
+                                                  <a href="" data-target="#student" data-toggle="tab" class="nav-link active"><i class="fa fa-male" aria-hidden="true"></i> Student</a>
                                               </li>
 
                                               <li class="nav-item">
-                                                  <a href="" data-target="#teacher" data-toggle="tab" class="nav-link">Teacher Data </a>
+                                                  <a href="" data-target="#teacher" data-toggle="tab" class="nav-link"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Teacher</a>
                                               </li>
                                           </ul>
                                           <div class="tab-content py-4">
-                                              <div class="tab-pane active" id="student"><BR><BR>
+                                              <div class="tab-pane active" id="student"><BR>
 
-
+                                                   <h4><i class="fa fa-search" aria-hidden="true"></i> Search Student Data</h4><BR>
 
                                                  <div class="">
-                                                     <label for="">Student Name:  </label>
-                                                     <input type="text" name="name" value="" placeholder="Type Student Name" onkeyup="searchStudentName(this.value)">
+                                                     <label for="">Name:  </label>
+                                                     <input type="text" name="name" value="" placeholder="Type student name" onkeyup="searchStudentName(this.value)">
                                                      <p><span  id="suggestion"></span> </p>
 
                                                  </div>
@@ -181,11 +181,12 @@ if (isset($_GET['signout'])) {
                                                                                                   <!--/row-->
                                               </div>
 
-                                              <div class="tab-pane" id="teacher"><BR><BR>
+                                              <div class="tab-pane" id="teacher"><BR>
+                                                <h4><i class="fa fa-search" aria-hidden="true"></i> Search Teacher Data</h4><BR>
 
                                                    <div class="">
-                                                       <label for="">Teacher Name: </label>
-                                                       <input type="text" name="name" value="" placeholder="Type Teacher Name" onkeyup="searchTeacherName(this.value)">
+                                                       <label for="">Name: </label>
+                                                       <input type="text" name="name" value="" placeholder="Type teacher name" onkeyup="searchTeacherName(this.value)">
                                                        <p><span  id="suggestionT"></span> </p>
 
                                                    </div>

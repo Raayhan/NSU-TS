@@ -34,6 +34,7 @@ if (isset($_GET['StudentSignout'])) {
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <script src="scripts/script.js" type="text/javascript"></script>
+    <script src="https://use.fontawesome.com/56f6746f8e.js"></script>
 
 
     <!-- Bootstrap CSS -->
@@ -57,19 +58,19 @@ if (isset($_GET['StudentSignout'])) {
               <div class="col-md-11 left nopadding">
                 <div class="header-left" >
                   <ul>
-                      <li style="background-color: #60151A;"><a href="StudentDashboard">Home</a></li>
-                      <li><a href="StudentProfile.php">Profile</a></li>
-                      <li><a href="#preferences">Preferences</a></li>
+                      <li style="background-color: #60151A;"><a href="StudentDashboard"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                      <li><a href="StudentProfile.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Profile</a></li>
+                      
                   </ul>
                </div>
               </div>
               <div class="col-md-1 left nopadding">
                 <div class="header-right">
                   <div class="dropdown">
-                    <button class="dropbtn">SIGN OUT</button>
+                    <button class="dropbtn"><i class="fa fa-power-off" aria-hidden="true"></i> SIGN OUT</button>
                     <div class="dropdown-content">
-                      <a href="#">Settings</a>
-                      <a href="StudentSignout.php">Sign Out</a>
+                      <a href="#"><i class="fa fa-cog" aria-hidden="true"></i>  Settings</a>
+                      <a href="StudentSignout.php"><i class="fa fa-power-off" aria-hidden="true"></i> Sign Out</a>
                     </div>
                   </div>
                </div>

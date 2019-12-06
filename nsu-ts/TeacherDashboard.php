@@ -33,6 +33,7 @@ if (isset($_GET['signout'])) {
      <link rel="stylesheet" type="text/css" href="css/style.css">
      <link rel="stylesheet" type="text/css" href="css/responsive.css">
      <script src="scripts/script.js" type="text/javascript"></script>
+     <script src="https://use.fontawesome.com/56f6746f8e.js"></script>
 
 
      <!-- Bootstrap CSS -->
@@ -48,7 +49,7 @@ if (isset($_GET['signout'])) {
        <div class="row">
          <div class="col-md-12 nopadding">
            <div class="title">
-             <a href="StudentDashboard.php"><img src="images/logo.png">North South University Tuition Services</a>
+             <a href="TeacherDashboard.php"><img src="images/logo.png">North South University Tuition Services</a>
            </div>
          </div>
          <div class="col-md-12 nopadding">
@@ -56,19 +57,19 @@ if (isset($_GET['signout'])) {
                <div class="col-md-11 left nopadding">
                  <div class="header-left">
                    <ul>
-                       <li style="background-color: #60151A;"><a href="TeacherDashboard.php"><i class="fa fa-home" aria-hidden="true"> </i>Home</a></li>
-                       <li><a href="TeacherProfile.php"><i class="fa fa-users" aria-hidden="true"></i>Profile</a></li>
-                       <li><a href="T_Preferences.php"><i class="fa fa-folder-open" aria-hidden="true"></i>Preferences</a></li>
+                       <li style="background-color: #60151A;"><a href="TeacherDashboard.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+                       <li><a href="TeacherProfile.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Profile</a></li>
+
                    </ul>
                 </div>
                </div>
                <div class="col-md-1 left nopadding">
                  <div class="header-right">
                    <div class="dropdown">
-                     <button class="dropbtn">SIGN OUT</button>
+                     <button class="dropbtn"><i class="fa fa-power-off" aria-hidden="true"></i> SIGN OUT</button>
                      <div class="dropdown-content">
-                       <a href="#">Settings</a>
-                       <a href="TeacherSignout.php">Sign Out</a>
+                      <a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a>
+                       <a href="TeacherSignout.php"><i class="fa fa-power-off" aria-hidden="true"></i> Sign Out</a>
                      </div>
                    </div>
                 </div>

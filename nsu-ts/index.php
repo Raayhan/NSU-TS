@@ -16,6 +16,7 @@ include('StudentLogin.php'); // Includes Login Script
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/mdb.min.css" rel="stylesheet">
 <script src="scipts/script.js" type="text/javascript"></script>
+<script src="https://use.fontawesome.com/56f6746f8e.js"></script>
 
 
 <!-- Bootstrap CSS -->
@@ -192,7 +193,7 @@ background-color: #ECF9FF;
 
                           <BR>
 
-                          <a class="btn btn-elegant" onclick="document.getElementById('id01').style.display='block'" style="width:auto; text-transform:capitalize;">Student</a>
+                          <a class="btn btn-elegant" onclick="document.getElementById('id01').style.display='block'" style="width:auto; text-transform:capitalize;"><i class="fa fa-male" aria-hidden="true"></i> Student</a>
                                                           <div id="id01" class="modal">
 
                           <form class="modal-content animate" action="StudentLogin.php" method="post">
@@ -235,7 +236,7 @@ background-color: #ECF9FF;
                                 }
                                 </script>
 
-                        <a class="btn btn-danger" onclick="document.getElementById('id02').style.display='block'" style="width:auto;text-transform:capitalize;">Teacher</a>
+                        <a class="btn btn-danger" onclick="document.getElementById('id02').style.display='block'" style="width:auto;text-transform:capitalize;"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Teacher</a>
                         <div id="id02" class="modal">
                           <form class="modal-content animate" action="/TeacherLogin.php" method="post">
                               <div class="imgcontainer">
@@ -286,10 +287,10 @@ background-color: #ECF9FF;
 
 
                       <h6 class="card-footer">If you are not already registerd ,<div class="dropdown">
-                        <button class="dropbtn">Register</button>
+                        <button class="dropbtn"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</button>
                         <div class="dropdown-content">
-                          <a href="StudentRegistration.php">As Student</a>
-                          <a href="TeacherRegistration.php">As Teacher</a>
+                          <a href="StudentRegistration.php"><i class="fa fa-male" aria-hidden="true"></i> As Student</a>
+                          <a href="TeacherRegistration.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> As Teacher</a>
                         </div>
                         <BR><BR><BR><BR>
                       </h6>
@@ -318,7 +319,7 @@ background-color: #ECF9FF;
                     service. It's also a platform for the students who want to earn
                      some money by giving tuitions to the students who need</p>
 
-                     <a class="btn btn-light-green" onclick="document.getElementById('id03').style.display='block'" style="width:auto;color:black !important;border-radius:15px!important;font-family: 'Coustard', serif;text-transform:capitalize;">Admin Panel</a>
+                     <a class="btn btn-light-green" onclick="document.getElementById('id03').style.display='block'" style="width:auto;color:black !important;border-radius:15px!important;font-family: 'Coustard', serif;text-transform:capitalize;"><i class="fa fa-user-secret" aria-hidden="true"></i>Admin Panel</a>
                                                      <div id="id03" class="modal">
 
                      <form class="modal-content animate" action="AdminLogin.php" method="post" style="text-align:center;">
