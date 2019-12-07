@@ -64,6 +64,7 @@ background-color: #ECF9FF;
                       <div class="header-left">
                         <ul>
                             <li><a href="index.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+                            <li><a href="contact.php"><i class="fa fa-phone"aria-hidden="true"></i> Contact us</a></li>
 
 
                         </ul>
@@ -100,29 +101,29 @@ background-color: #ECF9FF;
 
                                 <div class="col">
                                     <!-- First name -->
-                                    <input type="text" name="first_name" class="form-control" placeholder="First name">
+                                    <input type="text" name="first_name" class="form-control" placeholder="First name"required>
                                 </div>
                                 <div class="col">
                                     <!-- Last name -->
-                                    <input type="text" name="last_name" class="form-control" placeholder="Last name">
+                                    <input type="text" name="last_name" class="form-control" placeholder="Last name"required>
                                 </div>
                             </div>
 
                             <!-- E-mail -->
-                            <input type="email" name="email" class="form-control mb-4" placeholder="E-mail">
+                            <input type="email" name="email" class="form-control mb-4" placeholder="E-mail"required>
 
                             <!-- Password -->
-                            <input type="password" name="password" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                            <input type="password" name="password" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock"required>
                             <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
 
                             </small>
-                            <input type="password" name="password" class="form-control" placeholder="Confirm Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                            <input type="password" name="password" class="form-control" placeholder="Confirm Password" aria-describedby="defaultRegisterFormPasswordHelpBlock"required>
                             <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
 
                             </small>
 
                             <!-- Phone number -->
-                            <input type="number" name="phone" class="form-control" placeholder="Phone Number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+                            <input type="number" name="phone" class="form-control" placeholder="Phone Number" aria-describedby="defaultRegisterFormPhoneHelpBlock"required>
                             <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
                             </small>
 

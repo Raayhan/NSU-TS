@@ -59,6 +59,8 @@ if (isset($_GET['signout'])) {
                    <ul>
                        <li style="background-color: #60151A;"><a href="TeacherDashboard.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
                        <li><a href="TeacherProfile.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Profile</a></li>
+                       <li><a href="contact.php"><i class="fa fa-phone" aria-hidden="true"></i> Contact us</a></li>
+
 
                    </ul>
                 </div>
