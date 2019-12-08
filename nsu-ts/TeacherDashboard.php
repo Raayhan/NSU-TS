@@ -33,7 +33,6 @@ if (isset($_GET['signout'])) {
      <link rel="stylesheet" type="text/css" href="css/style.css">
      <link rel="stylesheet" type="text/css" href="css/responsive.css">
      <script src="scripts/script.js" type="text/javascript"></script>
-     <script src="https://use.fontawesome.com/56f6746f8e.js"></script>
 
 
      <!-- Bootstrap CSS -->
@@ -49,7 +48,7 @@ if (isset($_GET['signout'])) {
        <div class="row">
          <div class="col-md-12 nopadding">
            <div class="title">
-             <a href="TeacherDashboard.php"><img src="images/logo.png">North South University Tuition Services</a>
+             <a href="StudentDashboard.php"><img src="images/logo.png">North South University Tuition Services</a>
            </div>
          </div>
          <div class="col-md-12 nopadding">
@@ -57,21 +56,19 @@ if (isset($_GET['signout'])) {
                <div class="col-md-11 left nopadding">
                  <div class="header-left">
                    <ul>
-                       <li style="background-color: #60151A;"><a href="TeacherDashboard.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
-                       <li><a href="TeacherProfile.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Profile</a></li>
-                       <li><a href="contact.php"><i class="fa fa-phone" aria-hidden="true"></i> Contact us</a></li>
-
-
+                       <li style="background-color: #60151A;"><a href="TeacherDashboard.php"><i class="fa fa-home" aria-hidden="true"> </i>Home</a></li>
+                       <li><a href="TeacherProfile.php"><i class="fa fa-users" aria-hidden="true"></i>Profile</a></li>
+                       <li><a href="#"><i class="fa fa-folder-open" aria-hidden="true"></i>Preferences</a></li>
                    </ul>
                 </div>
                </div>
                <div class="col-md-1 left nopadding">
                  <div class="header-right">
                    <div class="dropdown">
-                     <button class="dropbtn"><i class="fa fa-power-off" aria-hidden="true"></i> SIGN OUT</button>
+                     <button class="dropbtn">SIGN OUT</button>
                      <div class="dropdown-content">
-                      <a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a>
-                       <a href="TeacherSignout.php"><i class="fa fa-power-off" aria-hidden="true"></i> Sign Out</a>
+                       <a href="#">Settings</a>
+                       <a href="TeacherSignout.php">Sign Out</a>
                      </div>
                    </div>
                 </div>
@@ -98,7 +95,60 @@ if (isset($_GET['signout'])) {
              <?php  if (isset($_SESSION['teacher'])) : ?>
 
                <html>
-                    <h6 style="font-family: 'Coustard', serif;"><?php echo $_SESSION['teacher']['first_name'].' '.$_SESSION['teacher']['last_name'];?></h6>
+                    <form class="text-center border border-light p-5" method="POST" action="Subject.php"> 
+                    <h6 style="font-family: 'Coustard', serif;"><?php echo $_SESSION['teacher']['first_name'].' '.$_SESSION['teacher']['last_name'];?></h6><br><br>
+                    <h5><b>Subject-Wise Tution Registration From</b></h5><br>
+
+                    <div class="form-row mb-4">
+                                <div class="col">
+                                    <!-- First name -->
+                                    <input type="text" name="first_name" class="form-control" placeholder="First name" require>
+                                </div>
+                                <div class="col">
+                                    <!-- Last name -->
+                                    <input type="text" name="last_name" class="form-control" placeholder="Last name">
+                                </div>
+                            </div>
+
+                            <!--Subject -->
+                            <input type="text" name="subject_name" class="form-control mb-4" placeholder="Which Subject You Want to Tituion" require>
+
+                            <!-- E-mail -->
+                            <input type="email" name="e_mail" class="form-control mb-4" placeholder="E-mail" require>
+
+
+                            <!-- Phone number -->
+                            <input type="number" name="phone" class="form-control" placeholder="Phone Number" aria-describedby="defaultRegisterFormPhoneHelpBlock" require>
+                            <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+                            </small>
+
+                            <div class="form-row mb-4">
+                                      <div class="col">
+                                        <select name="gender" class="browser-default custom-select">
+                                          <option selected>Gender</option>
+                                          <option value="Male">Male</option>
+                                          <option value="Female">Female</option>
+                                          <option value="Others">Others</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                      <div class="col">
+                                        <select name="department" class="browser-default custom-select">
+                                          <option selected>Department</option>
+                                          <option value="ECE">ECE</option>
+                                          <option value="BBA">BBA</option>
+                                          <option value="Architecture">Architecture</option>
+                                          <option value="Others">Others</option>
+
+                                        </select>
+                                    </div>
+
+                                    </div>
+                            </div>
+                                   
+
+                    <input class="submit-button" type="submit" name="Submit" value="SUBMIT">
+
 
                </html>
 
