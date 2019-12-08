@@ -16,6 +16,26 @@
 
 
     <title>ARC | NSU-TS</title>
+
+    <script>
+      // Search name without loading page
+           function searchSubjectName(str){
+             if(str.length == 0){
+               document.getElementById('suggestion').innerHTML = '';
+             }
+             else{
+               var xmlhttp = new XMLHttpRequest();
+               xmlhttp.onreadystatechange = function() {
+                   if (this.readyState == 4 && this.status == 200) {
+                   document.getElementById("suggestion").innerHTML = this.responseText;
+                 }
+               };
+               xmlhttp.open("GET", "SubjectSearchArch.php?student="+ str , true);
+               xmlhttp.send();
+             }
+ 
+           }
+           </script>
   </head>
   <body>
     <!-- Header Start -->
@@ -61,82 +81,22 @@
       <div class="row">
         <div class="col-md-12">
           <div class="section-title">
-            <h4>Tuition Service for - Department of Architecture</h4>
-            <p>Please select your desired Course from the catagories</p>
+            <h4>Tuition Service for - Department of Architecture</h4><br></br>
+            <h6><b>Please search your desired Course from the catagories</b></h6>
+
+
+            
+              <label for=""></label><b>Subject Name:</b></label>
+              <input type="text" name="name" placeholder="Type Subject Name" onkeyup="searchSubjectName(this.value)">
+              <p><b><span id="suggestion" ></span></b></p>
+
+
+            
+                    
           </div>
         </div>
       </div>
     </div>
-
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="my-box-option">
-            <div class="my-box-content">
-              <h2 class="my-box-title">ARC111</h2>
-              <p class="my-box-text">Foundation Design Studio I- Artistic Development</p>
-              <a href="/SBE" class="box-button">select</a>
-           </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="my-box-option">
-            <div class="my-box-content">
-              <h2 class="my-box-title">ARC112</h2>
-              <p class="my-box-text">Foundation Design Studio II- Form and Composition</p>
-              <a href="/SBE" class="box-button">select</a>
-           </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="my-box-option">
-            <div class="my-box-content">
-              <h2 class="my-box-title">ARC121</h2>
-              <p class="my-box-text">Graphics I- Basic Drawing</p>
-              <a href="/SBE" class="box-button">select</a>
-           </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="my-box-option">
-            <div class="my-box-content">
-              <h2 class="my-box-title">ARC122</h2>
-              <p class="my-box-text">Graphics II- Rendering</p>
-              <a href="/SBE" class="box-button">select</a>
-           </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="my-box-option">
-            <div class="my-box-content">
-              <h2 class="my-box-title">ARC200</h2>
-              <p class="my-box-text">Art, Craft and Design- observation and documentation</p>
-              <a href="/SBE" class="box-button">select</a>
-           </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="my-box-option">
-            <div class="my-box-content">
-              <h2 class="my-box-title">ARC213</h2>
-              <p class="my-box-text"> Allied Design Studio- Dimension and Product</p>
-              <a href="/SBE" class="box-button">select</a>
-           </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="my-box-option">
-            <div class="my-box-content">
-              <h2 class="my-box-title">ARC214</h2>
-              <p class="my-box-text"> Architecture Design Studio I- Function and Analysis</p>
-              <a href="/SBE" class="box-button">select</a>
-           </div>
-          </div>
-        </div>
-
-            </div>
-          </div>
 
 
 
