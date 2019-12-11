@@ -64,7 +64,7 @@ background-color: #ECF9FF;
                       <div class="header-left">
                         <ul>
                             <li><a href="index.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
-                            <li><a href="contact.php"><i class="fa fa-phone"aria-hidden="true"></i> Contact us</a></li>
+                            <li><a href="Contact.php"><i class="fa fa-phone"aria-hidden="true"></i> Contact us</a></li>
 
 
                         </ul>

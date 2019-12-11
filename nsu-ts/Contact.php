@@ -57,7 +57,7 @@
             <div class="header-left">
               <ul>
 
-                  <li style="background-color: #60151A;"><a href="contact.php"><i class="fa fa-phone"aria-hidden="true"></i> Contact us</a></li>
+                  <li style="background-color: #60151A;"><a href="Contact.php"><i class="fa fa-phone"aria-hidden="true"></i> Contact us</a></li>
 
 
               </ul>
@@ -191,6 +191,29 @@
 
 
 </section>
+<script type="text/javascript">
+  function con_validate(){
+  var a= document.forms["conform"]["name"].value;
+  var b= document.forms["conform"]["email"].value;
+  var c= document.forms["conform"]["subject"].value;
+  var d= document.forms["conform"]["message"].value;
+
+
+  if(a== ""){
+    window.alert("You must enter EMAIL");
+  }
+  if(b== ""){
+    window.alert("You must enter EMAIL");
+  }
+  if(c== ""){
+    window.alert("You must enter EMAIL");
+  }
+  if(d== ""){
+    window.alert("You must enter EMAIL");
+  }
+
+}
+</script>
 </div>
 <!--Section: Contact v.1-->
 

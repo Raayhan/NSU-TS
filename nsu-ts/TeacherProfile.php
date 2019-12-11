@@ -105,6 +105,7 @@ if (isset($_GET['TeacherSignout'])) {
                                          <li class="nav-item">
                                              <a href="" data-target="#profile" data-toggle="tab" class="nav-link active"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Profile</a>
                                          </li>
+                                         
 
                                          <li class="nav-item">
                                              <a href="" data-target="#edit" data-toggle="tab" class="nav-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Profile</a>
@@ -122,18 +123,14 @@ if (isset($_GET['TeacherSignout'])) {
                                                           <font color="red">  Email No : </font> <?php echo $_SESSION['teacher']['email'];?><BR><BR>
                                                           <font color="red">  Contact No :</font> <?php echo $_SESSION['teacher']['phone'];?><BR><BR>
                                                           <font color="red">  Gender :</font> <?php echo $_SESSION['teacher']['gender'];?><BR><BR>
-                                                          <font color="red">  Department :</font> <?php echo $_SESSION['teacher']['department'];?><BR><BR>
-
-
-
-
+                                                          <font color="red">  Department :</font> <?php echo $_SESSION['teacher']['department'];?><BR>
                                                        </p>
                                                     </div>
                                                  </div>
 
 
                                              </div>
-                                             <!--/row-->
+
                                          </div>
 
                                          <div class="tab-pane" id="edit" align="left">

@@ -88,6 +88,23 @@ if (isset($_GET['signout'])) {
             }
 
           }
+
+          function searchCourseName(str){
+            if(str.length == 0){
+              document.getElementById('suggestionC').innerHTML = '';
+            }
+            else{
+              var xmlhttp = new XMLHttpRequest();
+              xmlhttp.onreadystatechange = function() {
+                  if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("suggestionC").innerHTML = this.responseText;
+                }
+              };
+              xmlhttp.open("GET", "CourseSearch.php?courses="+ str , true);
+              xmlhttp.send();
+            }
+
+          }
      </script>
 
    </head>
@@ -154,7 +171,7 @@ if (isset($_GET['signout'])) {
 
                               <?php endif ?>
                               <div class="container">
-                                  <div class="row my-2">
+                                  <div class="row my-3">
                                       <div class="col-lg-8 order-lg-2">
                                           <ul class="nav nav-tabs">
                                               <li class="nav-item">
@@ -164,8 +181,11 @@ if (isset($_GET['signout'])) {
                                               <li class="nav-item">
                                                   <a href="" data-target="#teacher" data-toggle="tab" class="nav-link"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Teacher</a>
                                               </li>
+                                              <li class="nav-item">
+                                                  <a href="" data-target="#courses" data-toggle="tab" class="nav-link"><i class="fa fa-book" aria-hidden="true"></i> Courses</a>
+                                              </li>
                                           </ul>
-                                          <div class="tab-content py-4">
+                                          <div class="tab-content py-4"style="font-family: 'Coustard', serif; ">
                                               <div class="tab-pane active" id="student"><BR>
 
                                                    <h4><i class="fa fa-search" aria-hidden="true"></i> Search Student Data</h4><BR>
@@ -190,6 +210,21 @@ if (isset($_GET['signout'])) {
                                                        <p><span  id="suggestionT"></span> </p>
 
                                                    </div>
+                                              </div>
+
+                                              <div class="tab-pane" id="courses"><BR>
+
+                                                   <h4><i class="fa fa-search" aria-hidden="true"></i> Search Courses Data</h4><BR>
+
+                                                 <div class="">
+                                                     <label for="">Name:  </label>
+                                                     <input type="text" name="name" value="" placeholder="Type course name" onkeyup="searchCourseName(this.value)">
+                                                     <p><span  id="suggestionC"></span> </p>
+
+                                                 </div>
+
+
+                                                                                                  <!--/row-->
                                               </div>
                                           </div>
                                       </div>

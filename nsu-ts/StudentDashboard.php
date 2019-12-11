@@ -60,7 +60,7 @@ if (isset($_GET['StudentSignout'])) {
                   <ul>
                       <li style="background-color: #60151A;"><a href="StudentDashboard"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
                       <li><a href="StudentProfile.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Profile</a></li>
-                      <li><a href="contact.php"><i class="fa fa-phone" aria-hidden="true"></i> Contact us</a></li>
+                      <li><a href="Contact.php"><i class="fa fa-phone" aria-hidden="true"></i> Contact us</a></li>
 
                   </ul>
                </div>

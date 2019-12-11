@@ -5,16 +5,7 @@ if(!isset($_SESSION))
     }
 
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, "nsu-ts");
-// Check connection
-if (!$conn)
-      {
-        die("Connection failed: " . mysqli_connect_error());
-      }
+include('connect.php');
 // variable declaration
 $first_name = "";
 $last_name  = "";
@@ -51,7 +42,7 @@ function update(){
         //If query is good, head back to desired page.
         else{
         header('Location: StudentProfile.php');
-      
+
 
           }
         }

@@ -238,7 +238,7 @@ background-color: #ECF9FF;
 
                         <a class="btn btn-danger" onclick="document.getElementById('id02').style.display='block'" style="width:auto;text-transform:capitalize;"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Teacher</a>
                         <div id="id02" class="modal">
-                          <form class="modal-content animate" action="/TeacherLogin.php" method="post">
+                          <form class="modal-content animate" action="TeacherLogin.php" method="post">
                               <div class="imgcontainer">
                                   <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
                                   <img src="images/student.jpg" alt="Avatar" class="avatar">

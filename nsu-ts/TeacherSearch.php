@@ -21,7 +21,7 @@ error_reporting(0);
     </tr>";
     while($row = mysqli_fetch_array($result)) {
           echo "<tr>";
-            echo "<td>" . $row['first_name'] . "</td>";
+            echo "<td>" . $row["first_name"]." ".$row["last_name"]. "</td>";
             echo "<td>" . $row['email'] . "</td>";
             echo "<td>" . $row['phone'] . "</td>";
             echo "<td>" . $row['department'] . "</td>";
